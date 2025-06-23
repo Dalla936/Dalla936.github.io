@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Diallo Dalla</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">DIALLO <span class="accent">Dalla</span></span>
+                    <span class="logo-subtitle">Cybersecurity Engineer</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="presentation.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Présentation</span>
+                </a>
+                <a href="competences.html" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>Compétences</span>
+                </a>
+                <a href="experience.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Stage</span>
+                </a>
+                <a href="talents.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Talents</span>
+                </a>
+                <a href="contact.html" class="nav-link active">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">
+                <span class="title-number">05.</span>
+                Contact
+            </h1>
+            <p class="page-subtitle">Restons en contact pour discuter d'opportunités</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Discutons de votre projet</h3>
+                    <p>
+                        Que ce soit pour une opportunité d'alternance, un stage, ou simplement 
+                        pour échanger sur la cybersécurité, n'hésitez pas à me contacter.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>diallo.dalla@edu.univ-paris13.fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Localisation</h4>
+                                <p>Villetaneuse, Île-de-France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Formation</h4>
+                                <p>BUT Informatique - IUT Villetaneuse</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Dalla936" class="social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/dalla--diallo" class="social-link linkedin" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="assets/images/CV_Diallo_Dalla_2025_alt.pdf" class="social-link cv" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>CV PDF</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form" action="contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet">
+                            <option value="alternance">Opportunité d'alternance</option>
+                            <option value="stage">Proposition de stage</option>
+                            <option value="projet">Collaboration projet</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Votre message..."></textarea>
+                    </div>
+                    
+                    <!-- Honeypot pour anti-spam -->
+                    <input type="text" name="honeypot" style="display: none;">
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Diallo<span class="accent">Dalla</span></span>
+                        <span class="logo-subtitle">Futur Ingénieur Cybersécurité</span>
+                    </div>
+                    <p>Étudiant passionné par la cybersécurité et les tests d'intrusion, en formation à l'IUT de Villetaneuse.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="presentation.html">Présentation</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="experience.html">Expérience</a>
+                    <a href="talents.html">Talents</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>diallo.dalla@edu.univ-paris13.fr</p>
+                    <p>IUT de Villetaneuse</p>
+                    <p>Université Sorbonne Paris Nord</p>
+                    <div class="social-links">
+                        <a href="https://github.com/diallodalla" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/diallodalla" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diallo Dalla. Tous droits réservés.</p>
+                <p>Conçu avec passion pour la cybersécurité</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
