@@ -848,6 +848,7 @@ body {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  padding-right: 6rem;
 }
 
 .formation-item p {
