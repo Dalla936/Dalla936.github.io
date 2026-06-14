@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Expérience Professionnelle - Diallo Dalla</title>
-    <meta name="description" content="Découvrez ma première immersion dans le monde professionnel, mes apprentissages et mes réflexions suite à mon stage.">
+    <title>Mes Stages - DIALLO Dalla</title>
+    <meta name="description" content="Découvrez ma première immersion dans le monde professionnel, mes apprentissages et mes réflexions suite à mes stages.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             <div class="nav-logo">
                 <a href="index.html">
                     <span class="logo-text">DIALLO <span class="accent">Dalla</span></span>
-                    <span class="logo-subtitle">Software Engineer</span>
+                    <span class="logo-subtitle">Futur Software Engineer</span>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -33,7 +33,7 @@
                 </a>
                 <a href="experience.html" class="nav-link active">
                     <i class="fas fa-briefcase"></i>
-                    <span>Stage</span>
+                    <span>Stages</span>
                 </a>
                 <a href="talents.html" class="nav-link">
                     <i class="fas fa-star"></i>
@@ -44,9 +44,6 @@
                     <span>Contact</span>
                 </a>
             </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
                 <span></span>
@@ -66,112 +63,242 @@
     </section>
 
     <section class="experience-content">
-        <div class="container experience-grid">
+        <div class="container">
+
+            <!-- Sélecteur de stage -->
+            <div class="stage-switcher">
+                <button type="button" class="stage-tab active" data-stage="but2" aria-pressed="true">
+                    <div class="stage-tab-icon"><i class="fab fa-wordpress"></i></div>
+                    <div class="stage-tab-text">
+                        <span class="stage-tab-year">2025 · Stage de BUT 2</span>
+                        <h3>Développement WordPress sous PHP</h3>
+                        <p>Institut Galilée — plugins PHP, sécurité, documentation</p>
+                    </div>
+                </button>
+                <button type="button" class="stage-tab" data-stage="but3" aria-pressed="false">
+                    <div class="stage-tab-icon"><i class="fas fa-diagram-project"></i></div>
+                    <div class="stage-tab-text">
+                        <span class="stage-tab-year">2026 · Stage de BUT 3 (en cours)</span>
+                        <h3>Ingénierie logicielle</h3>
+                        <p>LIPN — microservice sécurisé, architecture hexagonale</p>
+                    </div>
+                </button>
+            </div>
+            <p class="stage-switcher-hint"><i class="fas fa-hand-pointer"></i> Cliquez sur une carte pour explorer le stage correspondant : mission, réalisations, technologies et bilan.</p>
+
+            <!-- Stage de BUT 2 -->
+            <div class="stage-panel active" data-stage="but2">
+                <div class="stage-overview">
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-bullseye"></i> Mission &amp; contexte</h4>
+                        <p>Stage de deuxième année effectué au LIPN, intégré à l'équipe de développement du site web
+                            du département informatique de l'Institut Galilée. Premier contact avec le monde
+                            professionnel : sprints agile, revues de code, télétravail occasionnel.</p>
+                    </div>
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-check-double"></i> Réalisations</h4>
+                        <ul>
+                            <li>Plugins PHP fonctionnels et sécurisés</li>
+                            <li>Nettoyage et optimisation de la base de données</li>
+                            <li>Documentation utilisateur et administrateur</li>
+                            <li>Participation aux sprints agile et revues de code</li>
+                            <li>Conteneurisation de l'application</li>
+                        </ul>
+                    </div>
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-toolbox"></i> Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag wordpress"><i class="fab fa-wordpress"></i> WordPress</span>
+                            <span class="tech-tag php"><i class="fab fa-php"></i> PHP</span>
+                            <span class="tech-tag sql"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="tech-tag docker"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="tech-tag git"><i class="fab fa-git-alt"></i> Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="stage-detail-heading"><i class="fas fa-circle-info"></i> Pour aller plus loin : mon vécu au quotidien</h3>
+                <div class="experience-grid">
 
             <div class="experience-card card-environment">
-                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-icon"><i class="fas fa-door-open"></i></div>
                 <h2 class="card-title">Première immersion : L'environnement professionnel</h2>
-                <ul class="card-list">
-                    <li>Accueil & Onboarding : Accueil chaleureux, j'ai trouvé que j'ai été intégré dans l'équipe de façon très fluide </li>
-                    <li>Atmosphère de travail : Je me sentais très à l'aise avec une atmosphère de travail assez calme, l'entraide était très importante. 
-                        Le maître de stage nous a mis à l'aise en commençant par le tutoiement.
-                         </li>
-                    <li>Appréhension des outils : J'avais quelques craintes par rapport à github ainsi que docker étant donné que je ne les avais jamais utilisé.
-                        Mais j'ai su rapidement m'adapter et apprendre à les utiliser efficacement grâce à ma détermination et un suivi précis par mon maître de stage.</li>
-                    </li>
-                    <li>Rythme & Organisation : Mise en pratique des sprints agile découverts en BUT 1, réunions hebdommadaires, télétravail occasionnel</li>
-                </ul>
-                <h3 class="card-subtitle">Culture d'Entreprise : mon révélateur</h3>
-                <ul class="card-list">
-                    <li>Valeurs Fortes : Innovation constante, esprit d'équipe</li>
-                    <li>Ambiance Singulière : Convivialité informelle mais professionnelle, chacun était libre d'exprimer son point de vue peut importe son status.</li>
-                    <li>Ce qui m'a marqué : La confiance accordée aux stagiaires, la transparence des décisions, la façon de rendre les stagiaires plus confiants et performants.</li>
-                    <li>Points Appréciés : Mentorat de qualité, flexibilité, sentiment d'appartenir à un groupe</li>
-                </ul>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Mon arrivée au LIPN</h3>
+                    <ul class="card-list">
+                        <li>Accueil & onboarding : un accueil chaleureux, je me suis senti intégré à l'équipe de façon très fluide et cordiale.</li>
+                        <li>Atmosphère de travail : calme et bienveillante, l'entraide est très importante au LIPN. Mon maître de stage a tout de suite instauré le tutoiement, ce qui a créé une relation de confiance et de proximité.</li>
+                        <li>Appréhension des outils : je découvrais Git et Docker, mais j'ai su m'adapter rapidement grâce à ma détermination et à un suivi précis de mon maître de stage — un apprentissage que j'ai réutilisé depuis dans d'autres projets.</li>
+                        <li>Rythme & organisation : mise en pratique des sprints agile découverts en BUT 1, réunions hebdomadaires (dev-team), télétravail occasionnel.</li>
+                    </ul>
+                </div>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Culture d'entreprise : mon révélateur</h3>
+                    <ul class="card-list">
+                        <li>Valeurs fortes : innovation constante, esprit d'équipe.</li>
+                        <li>Ambiance singulière : convivialité informelle mais professionnelle, chacun était libre d'exprimer son point de vue peu importe son statut.</li>
+                        <li>Ce qui m'a marqué : la confiance accordée aux stagiaires, la transparence des décisions, et la façon de les rendre plus confiants et performants au fur et à mesure de leur immersion.</li>
+                        <li>Points appréciés : mentorat de qualité, flexibilité, sentiment d'appartenir à une entité.</li>
+                    </ul>
+                </div>
                 <p class="card-quote">"Une découverte enrichissante des rouages internes et de la vie au quotidien d'une entreprise cyber."</p>
             </div>
 
             <div class="experience-card card-self-discovery">
-                <div class="card-icon"><i class="fas fa-user-tag"></i></div>
-                <h2 class="card-title">Révélations Personnelles : Qui suis-je en Pro ?</h2>
-                <ul class="card-list">
-                    <li>Forces Confirmées :
-                        <ul>
-                            <li>Rigueur & Attention aux détails : Rédaction de rapports hebdommadaires suite à nos réunions</li>
-                            <li>Autonomie & Proactivité : Je cherchais tout seul mes solutions avant de demander de l'aide à mon maître de stage</li>
-                            <li>Adaptabilité Rapide : Apprentissage rapide de WordPress, de ses plugins et de Docker + Adaptation rapide à l'équipe et la culture de l'entreprise</li>
-                        </ul>
-                    </li>
-                    <li><strong>Compétences Développées : </strong>
-                        <ul>
-                            <li>Communication Technique : Amélioration de la vulgarisation pour des non-experts. Par exemple, j'ai dû expliquer à un des clients
-                                comment utiliser un plugin WordPress que j'avais installé pour lui alors qu'il n'y connaissait rien.</li>
-                            </li>
-                            <li>Persévérance : J'ai su correctement réagir lorsque je n'arrivais pas à développer une fonctionnalité, demander de l'aide. 
-                                J'ai appris à ne pas abandonner face aux difficultés et de toujours essayer de trouver une solution.</li>
-                            </li>
-                            <li>Gestion du Stress : J'ai appris à fréquemment prendre la parole en public grâce aux réunions hebdommaires qui avaient lieu.
-                            </li>
-                        </ul>
-                    </li>
+                <div class="card-icon"><i class="fas fa-compass"></i></div>
+                <h2 class="card-title">Révélations personnelles : Qui suis-je en pro ?</h2>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Forces confirmées</h3>
+                    <ul class="card-list">
+                        <li>Rigueur & attention aux détails : rédaction de rapports hebdomadaires suite à nos réunions.</li>
+                        <li>Autonomie & proactivité : je cherchais d'abord mes propres solutions avant de demander de l'aide à mon maître de stage ou à des collègues.</li>
+                        <li>Adaptabilité rapide : apprentissage rapide de WordPress, de ses plugins et de Docker, ainsi qu'adaptation rapide à l'équipe et à la culture de l'entreprise.</li>
+                    </ul>
+                </div>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Compétences développées</h3>
+                    <ul class="card-list">
+                        <li>Communication technique : amélioration de la vulgarisation pour des non-experts. Par exemple, j'ai dû expliquer à un client comment utiliser un plugin WordPress/PHP que j'avais développé pour lui, alors qu'il n'y connaissait rien.</li>
+                        <li>Persévérance : j'ai su réagir quand je n'arrivais pas à développer une fonctionnalité en demandant de l'aide, sans jamais abandonner face aux difficultés.</li>
+                        <li>Gestion du stress : j'ai appris à fréquemment prendre la parole en public grâce aux réunions hebdomadaires.</li>
+                    </ul>
+                </div>
                 <p class="card-quote">"Un miroir sur mes compétences actuelles et un guide pour ma future évolution."</p>
             </div>
 
             <div class="experience-card card-teamwork">
-                <div class="card-icon"><i class="fas fa-users-cog"></i></div>
-                <h2 class="card-title">La Force du Collectif : Travail en Équipe</h2>
-                <ul class="card-list">
-                    <li>Mon Rôle dans l'Équipe : Développeur WordPress dans l'équipe de développement</li>
-                    <li>Dynamique d'Équipe : revues de code entre pairs, entraide constante.</li>
-                    <li>Communication Efficace : J'ai appris à formuler des feedbacks constructifs et à écouter activement.</li>
-                    <li>Gestion des Projets : Participation aux phases de planification et de résolution de problèmes en groupe + réutilisation de la méthode agile.</li>
-                </ul>
-                <h3 class="card-subtitle">Exemple Concret de Collaboration</h3>
-                <ul class="card-list">
-                    <li>Projet  : Développement d'un site web pour le département informatique de l'Institut Galilée.</li>
-                    <li>Mon Apport : Plugins WordPress fonctionnels et sécurisés, documentation utlisateur et administrateur, base de données nettoyée, développement de fonctionnalités.</li>
-                    <li>Synergie : Collaboration étroite avec l'équipe dev pour la remédiation.</li>
-                    <li>Leçon Clé : Le travail en équipe est primordial pour réussir un projet</li>
-                </ul>
+                <div class="card-icon"><i class="fas fa-people-group"></i></div>
+                <h2 class="card-title">La force du collectif : le travail en équipe</h2>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Mon rôle au quotidien</h3>
+                    <ul class="card-list">
+                        <li>Mon rôle dans l'équipe : développeur PHP/WordPress au sein de l'équipe de développement du laboratoire.</li>
+                        <li>Dynamique d'équipe : revues de code entre pairs, entraide constante.</li>
+                        <li>Communication efficace : j'ai appris à formuler des retours constructifs, à écouter activement et à aller à l'essentiel.</li>
+                        <li>Gestion de projets : participation aux phases de planification et de résolution de problèmes en groupe, avec réutilisation de la méthode agile.</li>
+                    </ul>
+                </div>
+                <div class="card-section">
+                    <h3 class="card-subtitle">Exemple concret de collaboration</h3>
+                    <ul class="card-list">
+                        <li>Projet : développement d'un site web pour le département informatique de l'Institut Galilée.</li>
+                        <li>Mon apport : plugins PHP/WordPress fonctionnels et sécurisés, documentation utilisateur et administrateur, base de données nettoyée, développement de nouvelles fonctionnalités.</li>
+                        <li>Synergie : collaboration étroite avec l'équipe dev pour la remédiation.</li>
+                        <li>Leçon clé : le travail en équipe est primordial pour réussir un projet et avoir un avis extérieur.</li>
+                    </ul>
+                </div>
                 <p class="card-quote">"Le travail d'équipe, c'est la somme des individualités au service d'un objectif commun."</p>
             </div>
 
-            <div class="experience-card card-but3-stage">
-                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-                <h2 class="card-title">Stage de BUT 3 : ingénierie logicielle au LIPN</h2>
-                <ul class="card-list">
-                    <li><strong>Mission :</strong> développement de bout en bout d'un microservice sécurisé de gestion des stages — architecture hexagonale, API RESTful sous AdonisJS, authentification/autorisations, conteneurisation Docker.</li>
-                    <li><strong>Technologies :</strong> Node.js, TypeScript, AdonisJS, Vue.js, Docker, Git.</li>
-                </ul>
-                <p class="edit-marker">
-                    <i class="fas fa-pen-fancy"></i>
-                    [✍️ À RÉDIGER] La consigne demande explicitement un <strong>bilan du stage de BUT 3</strong> —
-                    distinct de ton stage de BUT 2 raconté ci-dessus. Quelques pistes pour structurer ton retour
-                    d'expérience (avec des exemples concrets, pas des généralités) :
-                </p>
-                <ul class="edit-hints">
-                    <li><strong>Découverte du monde professionnel :</strong> comment fonctionne l'équipe (culture, pratiques, réunions, outils mobilisés — Git, Docker, gestion de tickets...) ? Comment se gère un désaccord ou un blocage technique en équipe ?</li>
-                    <li><strong>Ce que tu as découvert de toi-même :</strong> qu'est-ce que ce stage a confirmé ou bousculé dans ta vision du métier d'ingénieur logiciel ? Une compétence que tu pensais avoir et qui s'est révélée différente sur le terrain ?</li>
-                    <li><strong>Ce dont tu es le plus fier :</strong> un moment précis où tu as résolu un problème difficile, livré quelque chose dont tu es content, ou progressé de façon visible (par ex. sur l'architecture hexagonale ou Docker).</li>
-                    <li><strong>Difficultés et rebonds :</strong> la consigne valorise la transparence — quel a été ton point de blocage le plus sérieux, et comment l'as-tu surmonté ?</li>
-                </ul>
-            </div>
+                </div>
+
+            <h2 class="section-title">Conseils reçus en cours de route</h2>
+            <div class="experience-grid">
 
             <div class="experience-card card-advice">
                 <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                <h2 class="card-title">Des Conseils qui éclairent ma route</h2>
+                <h2 class="card-title">Des conseils qui éclairent ma route</h2>
                 <div class="advice-item">
-                    <h3>Stéphane Thay <small>(Dir. DSI - Société Générale)</small></h3>
-                    <p>"Poursuivez vos études après le BUT 3 si vous en avez les capacités. Vous le regretteriez toute votre vie sinon."</p>
-                    <p class="impact-statement">➡️ Impact : Motivation renforcée pour l'école d'ingénieur</p>
+                    <h3>Haïfa ZARGAYOUNA <small>(Chercheuse LIPN - Enseignante)</small></h3>
+                    <p>"Ne laissez personne vous dire que vous n'y arriverez pas. Soyez patient, forcez-vous et restez curieux. N'abandonnez jamais."</p>
+                    <p class="impact-statement"> l'impact : Un mantra de persévérance et de résilience face aux défis complexes.</p>
                 </div>
                 <div class="advice-item">
-                    <h3>Madame Zargayouna <small>(Chercheuse LIPN - Enseignante)</small></h3>
-                    <p>"Ne laissez personne vous dire que vous n'y arriverez pas. Soyez patient, forcez-vous et restez curieux. N'abandonnez jamais."</p>
-                    <p class="impact-statement">➡️ Impact : Un mantra de persévérance et de résilience face aux défis complexes.</p>
+                    <h3>Stéphane THAY <small>(Dir. DSI - Société Générale)</small></h3>
+                    <p>"Poursuivez vos études après le BUT 3 si vous en avez les capacités. Vous le regretteriez toute votre vie sinon."</p>
+                    <p class="impact-statement"> l'impact : Motivation renforcée pour viser l'école d'ingénieur.</p>
                 </div>
             </div>
+            </div>
 
+            </div>
+            <!-- Stage de BUT 3 -->
+            <div class="stage-panel" data-stage="but3">
+                <div class="stage-overview">
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-bullseye"></i> Mission &amp; contexte</h4>
+                        <p>Stage long de fin de BUT (mars-juin 2026), de retour au LIPN, dans la même équipe mais avec un rôle différent. 
+                            Ma mission était de développer de bout en bout un microservice
+                            sécurisé de gestion des stages du laboratoire.</p>
+                    </div>
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-check-double"></i> Réalisations</h4>
+                        <ul>
+                            <li>Architecture hexagonale du microservice (domaine / application / infrastructure)</li>
+                            <li>API RESTful sous AdonisJS pour la gestion des stages</li>
+                            <li>Authentification &amp; autorisations via les middlewares</li>
+                            <li>Environnement de développement conteneurisé avec Docker</li>
+                            <li>Documentation technique</li>
+                            <li>Tests fonctionnels</li>
+                            <li>Recueil de besoins</li>
+                        </ul>
+                    </div>
+                    <div class="stage-overview-item">
+                        <h4><i class="fas fa-toolbox"></i> Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag node"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="tech-tag typescript"><i class="fas fa-code"></i> TypeScript</span>
+                            <span class="tech-tag adonis"><i class="fas fa-bolt"></i> AdonisJS</span>
+                            <span class="tech-tag docker"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="tech-tag git"><i class="fab fa-git-alt"></i> Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="stage-detail-heading"><i class="fas fa-circle-info"></i> Pour aller plus loin : mon bilan à mi-parcours</h3>
+                <div class="experience-grid">
+
+            <div class="experience-card card-but3-stage">
+                <div class="card-icon"><i class="fas fa-route"></i></div>
+                <h2 class="card-title">Mon bilan à mi-parcours</h2>
+                <div>
+                    <p>
+                        <strong>Découverte du monde professionnel :</strong> retrouver le LIPN pour ce second stage
+                        fût une chance à ne pas louper. Les outils sont les mêmes qu'en BUT2 (Git, Docker) mais
+                        l'exigence change, les revues de code portent autant sur l'architecture que sur le
+                        résultat, et une partie des échanges techniques avec les chercheurs se fait en anglais.
+                    </p>
+                    <p>
+                        <strong>Ce que j'ai découvert de moi-même :</strong> ce stage confirme ce que m'avait déjà
+                        montré AirAtlas (voir <a href="presentation.html">Présentation</a>). Désormais, je préfère concevoir un
+                        système avant de l'écrire plutôt que d'en chercher les failles a posteriori. Mettre en place
+                        l'architecture hexagonale m'a obligé à anticiper les dépendances et les évolutions futures du
+                        microservice . C'est une façon de penser que je ne savais pas avoir développée à ce point.
+                    </p>
+                    <p>
+                        <strong>Ce dont je suis le plus fier :</strong> à ce stade du stage, la mise en place de
+                        l'architecture hexagonale et que l'API soit fonctionnelle. Les travaux que j'ai réalisé aideront
+                        pour le développement futur du microservice.
+                    </p>
+                    <p>
+                        <strong>Difficultés et rebonds :</strong> découvrir AdonisJS, un framework que je n'avais
+                        jamais utilisé, tout en appliquant rigoureusement les principes de l'architecture hexagonale, du clean code, a
+                        demandé du temps.
+                        Il fallait que je résiste à la tentation d'aller vite en mélangeant les couches.
+                        J'ai surmonté ce blocage en m'appuyant sur la documentation officielle, les retours de mon
+                        maître de stage, plusieurs passes de refactoring ainsi que des tutoriels via Adocasts.
+                    </p>
+                </div>
+
+            </div>
+
+                </div>
+
+            <h2 class="section-title">Conseils reçus en cours de route</h2>
+            <div class="experience-grid">
+
+            <div class="experience-card card-advice">
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h2 class="card-title">Des conseils qui éclairent ma route</h2>
+                <div class="advice-item">
+                    <h3>Gaêl GUIBON <small>(Chercheur LIPN (Équipe RCLN) - Enseignant)</small></h3>
+                    <p>"Ne vous arrêtez pas après le BAC +3, allez en master vous avez encore plein de choses à apprendre et vous en avez les capacités."</p>
+                    <p class="impact-statement"> l'impact : Motivation renforcée pour poursuivre ses études.</p>
+                </div>
+            </div>
+            </div>
+
+            </div>
         </div>
     </section>
 
@@ -190,7 +317,7 @@
                     <h4>Navigation</h4>
                     <a href="presentation.html">Présentation</a>
                     <a href="competences.html">Compétences</a>
-                    <a href="experience.html">Expérience</a>
+                    <a href="experience.html">Stages</a>
                     <a href="talents.html">Talents</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -212,7 +339,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Diallo Dalla. Tous droits réservés.</p>
+                <p>&copy; 2026 Dalla DIALLO. Tous droits réservés.</p>
                 <p>Conçu avec passion pour le développement</p>
             </div>
         </div>

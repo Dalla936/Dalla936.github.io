@@ -1,335 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation - Diallo Dalla</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Présentation - DIALLO Dalla</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <span class="logo-text">DIALLO <span class="accent">Dalla</span></span>
-                    <span class="logo-subtitle">Software Engineer</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">
-                    <i class="fas fa-home"></i>
-                    <span>Accueil</span>
-                </a>
-                <a href="presentation.html" class="nav-link active">
-                    <i class="fas fa-user"></i>
-                    <span>Présentation</span>
-                </a>
-                <a href="competences.html" class="nav-link">
-                    <i class="fas fa-code"></i>
-                    <span>Compétences</span>
-                </a>
-                <a href="experience.html" class="nav-link">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Stage</span>
-                </a>
-                <a href="talents.html" class="nav-link">
-                    <i class="fas fa-star"></i>
-                    <span>Talents</span>
-                </a>
-                <a href="contact.html" class="nav-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <span class="logo-text"
+              >DIALLO <span class="accent">Dalla</span></span
+            >
+            <span class="logo-subtitle">Futur Software Engineer</span>
+          </a>
         </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+          </a>
+          <a href="presentation.html" class="nav-link active">
+            <i class="fas fa-user"></i>
+            <span>Présentation</span>
+          </a>
+          <a href="competences.html" class="nav-link">
+            <i class="fas fa-code"></i>
+            <span>Compétences</span>
+          </a>
+          <a href="experience.html" class="nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Stages</span>
+          </a>
+          <a href="talents.html" class="nav-link">
+            <i class="fas fa-star"></i>
+            <span>Talents</span>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">
-                <span class="title-number">01.</span>
-                Présentation personnelle
-            </h1>
-            <p class="page-subtitle">Mon parcours, mon projet professionnel et mes ambitions</p>
-        </div>
+      <div class="container">
+        <h1 class="page-title">
+          <span class="title-number">01.</span>
+          Présentation personnelle
+        </h1>
+        <p class="page-subtitle">
+          Mon parcours, mon projet professionnel et mes ambitions
+        </p>
+      </div>
     </section>
 
     <!-- Presentation Content -->
     <section class="presentation-content">
-        <div class="container">
-            <div class="content-grid">
-                <div class="text-content">
-                    <div class="text-block fade-in">
-                        <h3>Qui suis-je ?</h3>
-                        <p>
-                            Je suis <strong>Dalla DIALLO</strong>, étudiant en troisième année de BUT Informatique 
-                            au sein de l'Université Sorbonne Paris Nord, plus précisément à l'IUT de Villetaneuse. 
-                            Je suis en recherche d'une alternance pour ma future école d'ingénieur.
-                            Je suis une personne curieuse, motivée qui a toujours été intéressée par l'informatique 
-                            dès le plus jeune âge.
-                        </p>
-                    </div>
-                    
-                    <div class="text-block fade-in">
-                        <h3>Mes compétences techniques</h3>
-                        <p>
-                            J'apprécie particulièrement la conception d'architectures complètes : API RESTful avec
-                            <span class="highlight">AdonisJS</span> et <span class="highlight">Node.js</span>, interfaces avec
-                            <span class="highlight">Vue.js</span> et <span class="highlight">React Native</span>, le tout
-                            conteneurisé avec <span class="highlight">Docker</span>. Je maîtrise également
-                            <span class="highlight">Java</span>, <span class="highlight">Python</span>,
-                            <span class="highlight">PHP</span> et les bases de données relationnelles
-                            (<span class="highlight">PostgreSQL</span>, <span class="highlight">MySQL</span>), une discipline
-                            que j'ai pu approfondir lors de mes stages au LIPN.
-                        </p>
-                    </div>
-                    
-                    <div class="text-block fade-in">
-                        <h3>Mes objectifs</h3>
-                        <p>
-                            Je souhaite devenir <strong>ingénieur logiciel</strong>, capable de concevoir des systèmes
-                            robustes de bout en bout — de l'architecture au déploiement. Après mon BUT Informatique,
-                            j'intègre l'<strong>ESIEE Paris</strong> en apprentissage (filière IDAD) à partir de septembre 2026,
-                            sur un rythme d'un mois en entreprise / un mois en formation. La cybersécurité reste une
-                            branche qui me passionne : je la garde comme spécialisation possible plutôt que comme
-                            objectif exclusif, selon les opportunités que je rencontrerai.
-                        </p>
-                        <p class="edit-marker">
-                            <i class="fas fa-pen-fancy"></i>
-                            [✍️ À RÉDIGER — toi seul peux l'écrire] Pourquoi le développement logiciel précisément ?
-                            Qu'est-ce qui, dans ton stage au LIPN ou dans tes projets (AirAtlas, Boxy...), t'a fait
-                            pencher vers cette voie ? Une anecdote concrète vaut mieux qu'une déclaration générale.
-                        </p>
-                    </div>
-
-                    <div class="text-block fade-in">
-                        <h3>Mon projet professionnel (PPP)</h3>
-                        <p>
-                            Mon BUT Informatique se prolonge par un diplôme d'ingénieur en apprentissage à l'ESIEE Paris
-                            (2026-2029, filière IDAD — Informatique, Design, Architecture et Développement). Ce choix
-                            s'appuie sur mon expérience au laboratoire LIPN (CNRS), où j'ai développé un microservice
-                            sécurisé en architecture hexagonale et touché à l'ensemble de la chaîne : conception API,
-                            authentification, conteneurisation Docker.
-                        </p>
-                        <p class="edit-marker">
-                            <i class="fas fa-pen-fancy"></i>
-                            [✍️ À RÉDIGER] La consigne demande un PPP qui prolonge ta réflexion du TD PPP de BUT2/3.
-                            Pistes pour structurer ton paragraphe :
-                        </p>
-                        <ul class="edit-hints">
-                            <li>Comment ta vision du métier d'ingénieur a évolué entre ta 1ère et ta 3ème année ?</li>
-                            <li>Pourquoi l'alternance plutôt qu'un cursus classique (autonomie, ancrage terrain, rythme d'apprentissage...) ?</li>
-                            <li>Qu'attends-tu concrètement de l'ESIEE et de la filière IDAD ?</li>
-                            <li>En quoi ton vécu au LIPN confirme ou nuance ce projet ?</li>
-                        </ul>
-                    </div>
-
-                    <div class="text-block fade-in">
-                        <h3>Mes objectifs à court, moyen et long terme</h3>
-                        <p class="edit-marker">
-                            <i class="fas fa-pen-fancy"></i>
-                            [✍️ À RÉDIGER] La consigne demande une reprise de tes objectifs sur plusieurs horizons.
-                            Voici une structure possible — à toi de la remplir avec tes propres mots et jalons :
-                        </p>
-                        <ul class="edit-hints">
-                            <li><strong>Court terme (d'ici sept. 2026) :</strong> ex. terminer le BUT, valider le contrat d'apprentissage, finaliser un projet perso...</li>
-                            <li><strong>Moyen terme (pendant les 3 ans à l'ESIEE) :</strong> ex. monter en compétence sur tel domaine, viser tel type de mission, obtenir telle certification...</li>
-                            <li><strong>Long terme (après le diplôme) :</strong> ex. quel poste, quel secteur, la cybersécurité redevient-elle une option à ce moment-là ?</li>
-                        </ul>
-                    </div>
-
-                    <div class="text-block fade-in">
-                        <h3>Pourquoi l'informatique ?</h3>
-                        <p>
-                            Issu d'un Baccalauréat Général Scientifique et passionné par l'informatique 
-                            depuis le plus jeune âge, me diriger vers l'informatique pour la suite de mon 
-                            parcours professionnel a été évident. L'informatique est un secteur en pleine expansion, attractif,
-                            offrant des opportunités d'autonomie, de télétravail, et d'innovation constante.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="visual-content">
-                    <div class="skills-radar">
-                        <h3>Soft Skills</h3>
-                        <ul class="radar-list">
-                            <li class="radar-item">
-                                <span class="skill-name">Communication</span>
-                                <div class="skill-level">
-                                    <span class="level-label">Excellente</span>
-                                    <span class="level-description">Persuasive et claire</span>
-                                </div>
-                            </li>
-                            <li class="radar-item">
-                                <span class="skill-name">Écoute</span>
-                                <div class="skill-level">
-                                    <span class="level-label">Active</span>
-                                    <span class="level-description">Empathique et attentive</span>
-                                </div>
-                            </li>
-                            <li class="radar-item">
-                                <span class="skill-name">Rigueur</span>
-                                <div class="skill-level">
-                                    <span class="level-label">Constant</span>
-                                    <span class="level-description">Fiable et méthodique</span>
-                                </div>
-                            </li>
-                            <li class="radar-item">
-                                <span class="skill-name">Détermination</span>
-                                <div class="skill-level">
-                                    <span class="level-label">Expert</span>
-                                    <span class="level-description">L'abandon n'est jamais une option</span>
-                                </div>
-                            </li>
-                            <li class="radar-item">
-                                <span class="skill-name">Curiosité</span>
-                                <div class="skill-level">
-                                    <span class="level-label">Expérimenté</span>
-                                    <span class="level-description">J'aime les défis et la nouveauté</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                    <div class="formation-card">
-                        <h3><i class="fas fa-graduation-cap"></i> Mes formations</h3>
-                        <div class="formation-item">
-                            <h4>BUT Informatique</h4>
-                            <p>IUT de Villetaneuse - 2023-2026</p>
-                            <span class="status">En cours</span>
-                        </div>
-                        <div class="formation-item">
-                            <h4>Baccalauréat Général Scientifique</h4>
-                            <p>Spécialité Mathématiques et Physique</p>
-                            <span class="status completed">Obtenu</span>
-                        </div>
-                    </div>
-                    
-                    <div class="formation-card current-formation-card">
-                        <h3><i class="fas fa-book"></i> Ma formation actuelle</h3>
-                        <div class="formation-description">
-                            <h4>BUT Informatique - IUT de Villetaneuse</h4>
-                            <p>
-                                Le BUT informatique est une formation que j'ai choisi en lien avec mon parcours scolaire. 
-                                <br><br>
-                                Cette formation est généraliste, elle permets aux étudiants diplomés d'avoir la possibilité 
-                                de s'insérer dans le monde professionnel ainsi qu'avoir un bagage de compétences valorisé
-                                pour la poursuite d'études.
-                            </p>
-                            <p>
-                                Pour ma part, lors de la première année, j'ai eu quelques difficultés à m'adapter, 
-                                jusque même une volonté à quitter celle-ci. 
-                                <br><br>
-                                Toutefois, via l'aide des professeurs ainsi que ma persévérance,
-                                j'ai réussi à surmonter ces complications. C'est la chose dont je suis le plus fier. Au cours de la 2ème et la 3ème année,
-                                je suis parvenu à comprendre les enjeux techniques ainsi que la gestion à avoir lors de projets qui est toute aussi importante.
-                                Elle pousse notre esprit crtique et nous apprends l'importance de connaitre notre valeur, celle de nos travaux ainsi que  les faire valoir.
-                            </p>
-                        </div>
-                    </div>
-        
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-content">
+            <div class="text-block fade-in">
+              <h3>Qui suis-je ?</h3>
+              <p>
+                Je suis <strong>Dalla DIALLO</strong>, étudiant en troisième
+                année de BUT Informatique au sein de l'Université Sorbonne Paris
+                Nord, plus précisément à l'IUT de Villetaneuse. Je suis en
+                recherche d'une alternance pour ma future école d'ingénieur
+                (ESIEE Paris). Je suis une personne curieuse, motivée qui a
+                toujours été intéressée par l'informatique dès le plus jeune
+                âge.
+              </p>
             </div>
+
+            <div class="text-block fade-in">
+              <h3>Mes compétences techniques</h3>
+              <p>
+                J'apprécie particulièrement la conception d'architectures
+                complètes : API RESTful avec
+                <span class="highlight">AdonisJS</span> et
+                <span class="highlight">Node.js</span>, interfaces avec
+                <span class="highlight">Vue.js</span> et
+                <span class="highlight">React Native</span>, le tout
+                conteneurisé avec <span class="highlight">Docker</span>. Je
+                maîtrise également <span class="highlight">Java</span>,
+                <span class="highlight">Python</span>,
+                <span class="highlight">PHP</span> et les bases de données
+                relationnelles (<span class="highlight">PostgreSQL</span>,
+                <span class="highlight">MySQL</span>), une discipline que j'ai
+                pu approfondir lors de mes stages au LIPN.
+              </p>
+            </div>
+
+            <div class="text-block fade-in">
+              <h3>Mes objectifs</h3>
+              <p>
+                Je souhaite devenir <strong>ingénieur logiciel</strong>, capable
+                de concevoir des systèmes robustes de bout en bout — de
+                l'architecture au déploiement. Après mon BUT Informatique,
+                j'intègre l'<strong>ESIEE Paris</strong> en apprentissage
+                (filière INFO) à partir de septembre 2026, sur un rythme d'un
+                mois en entreprise / un mois en formation. La cybersécurité
+                reste une branche qui me passionne : je la garde comme
+                spécialisation possible plutôt que comme objectif exclusif,
+                selon les opportunités que je rencontrerai.
+              </p>
+              <p>
+                Le déclic s'est fait sur le terrain plutôt que dans les cours.
+                Avec <strong>AirAtlas</strong>, j'ai porté pour la première fois
+                un projet de bout en bout. Par exemple, via le choix d'un modèle
+                NLP (MiniLM, retenu pour sa rapidité, la profondeur des
+                recommandations ainsi que la traduction des requêtes en valeurs
+                vectorielles), j'ai pu voir l'impact de mes décisions techniques
+                sur l'expérience utilisateur, jusqu'à l'application React Native
+                finale. Construire quelque chose qui tourne, qu'on peut montrer
+                et faire évoluer, m'a procuré une satisfaction que j'avais peu
+                recontré lors de mon BUT. Mon stage au LIPN a confirmé une
+                préférence, concevoir l'architecture hexagonale d'un
+                microservice m'a appris à penser un système avant de l'écrire,
+                une démarche qui se rapproche du génie logiciel plus que de
+                l'audit.
+              </p>
+            </div>
+
+            <div class="text-block fade-in">
+              <h3>Mon projet professionnel</h3>
+              <p>
+                Mon BUT Informatique se prolonge par un diplôme d'ingénieur en
+                apprentissage à l'ESIEE Paris (2026-2029, filière INFO, option
+                logicielle). Ce choix s'appuie sur mon expérience au laboratoire
+                LIPN (CNRS), où j'ai développé un microservice sécurisé en
+                architecture hexagonale et touché à l'ensemble de la chaîne :
+                conception API, authentification, conteneurisation Docker.
+              </p>
+              <p>
+                Au début de mon BUT, je voyais ce métier presque uniquement à
+                travers le code, c'est à dire écrire des programmes qui
+                fonctionnent. Les difficultés de ma première année (voir « Ma
+                formation actuelle » ci-contre) m'ont obligé à élargir cette
+                vision. Par exemple, la SAÉ 2.05 m'a appris à structurer un
+                projet (budget, planning, répartition des tâches), et la SAÉ
+                4.01 / AirAtlas à gérer un désaccord d'équipe comme le choix de
+                l'algorithme de recommandation et tout cela sans que le projet
+                ne s'arrête.
+                <br /><br />
+                Choisir l'alternance plutôt qu'un cursus classique est la suite
+                logique de cette expérience : le rythme d'un mois en entreprise
+                / un mois en formation à l'ESIEE permet de rester assez
+                longtemps dans une équipe pour voir les conséquences de ses
+                choix techniques et les corriger — ce qu'un stage de quelques
+                semaines ne permet pas vraiment. De la filière INFO (option
+                logicielle), j'attends justement ça : approfondir la conception
+                et l'architecture, dans la continuité de l'architecture
+                hexagonale que j'ai mise en place au LIPN.
+              </p>
+            </div>
+
+            <div class="text-block fade-in">
+              <h3>Mes objectifs à court, moyen et long terme</h3>
+              <div>
+                <p>
+                  <strong>Court terme (d'ici septembre 2026) :</strong> terminer
+                  mon stage de BUT3 au LIPN (jusqu'à fin juin), valider mon
+                  diplôme, trouver mon alternance ainsi que la débuter et
+                  intégrer l'ESIEE Paris en filière INFO, où je suis déjà admis.
+                </p>
+                <p>
+                  <strong>Moyen terme:</strong> profiter du rythme d'alternance
+                  pour enchaîner des missions sur des stacks différentes de
+                  celles du LIPN, monter en compétence sur l'architecture et la
+                  conception logicielle — cœur de la filière INFO avec l'option
+                  logicielle, et continuer ma veille Root-Me / IA en parallèle,
+                  sans qu'elle devienne mon activité principale. Acquérir plus
+                  de certifications que ce soit dans la cybersécurité, le
+                  développement web ou l'IA. Mon objectif est le diplôme
+                  d'ingénieur en 2029.
+                </p>
+                <p>
+                  <strong>Long terme (après 2029) :</strong> exercer comme
+                  ingénieur logiciel, idéalement sur des projets où la sécurité
+                  est pensée dès la conception (sécurité applicative /
+                  DevSecOps). C'est une façon de réconcilier mes deux passions
+                  sans avoir à choisir entre elles.
+                </p>
+              </div>
+            </div>
+
+            <div class="text-block fade-in">
+              <h3>Pourquoi l'informatique ?</h3>
+              <p>
+                Issu d'un Baccalauréat Général Scientifique et passionné par
+                l'informatique depuis le plus jeune âge, me diriger vers
+                l'informatique pour la suite de mon parcours professionnel a été
+                évident. L'informatique est un secteur en pleine expansion,
+                attractif, offrant des opportunités d'autonomie, de télétravail,
+                et d'innovation constante.
+              </p>
+            </div>
+          </div>
+
+          <div class="visual-content">
+            <div class="skills-radar">
+              <h3>Soft Skills</h3>
+              <ul class="radar-list">
+                <li class="radar-item">
+                  <span class="skill-name">Communication</span>
+                  <div class="skill-level">
+                    <span class="level-label">Excellente</span>
+                    <span class="level-description">Persuasive et claire</span>
+                  </div>
+                </li>
+                <li class="radar-item">
+                  <span class="skill-name">Écoute</span>
+                  <div class="skill-level">
+                    <span class="level-label">Active</span>
+                    <span class="level-description"
+                      >Empathique et attentive</span
+                    >
+                  </div>
+                </li>
+                <li class="radar-item">
+                  <span class="skill-name">Rigueur</span>
+                  <div class="skill-level">
+                    <span class="level-label">Constant</span>
+                    <span class="level-description">Fiable et méthodique</span>
+                  </div>
+                </li>
+                <li class="radar-item">
+                  <span class="skill-name">Détermination</span>
+                  <div class="skill-level">
+                    <span class="level-label">Expert</span>
+                    <span class="level-description"
+                      >L'abandon n'est jamais une option</span
+                    >
+                  </div>
+                </li>
+                <li class="radar-item">
+                  <span class="skill-name">Curiosité</span>
+                  <div class="skill-level">
+                    <span class="level-label">Expérimenté</span>
+                    <span class="level-description"
+                      >J'aime les défis et la nouveauté</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="formation-card">
+              <h3><i class="fas fa-graduation-cap"></i> Mes formations</h3>
+              <div class="formation-item">
+                <h4>Baccalauréat Général Scientifique</h4>
+                <p>Spécialité Mathématiques et Physique</p>
+                <span class="status completed">Obtenu</span>
+              </div>
+              <div class="formation-item">
+                <h4>BUT Informatique</h4>
+                <p>IUT de Villetaneuse - 2023-2026</p>
+                <span class="status">En cours</span>
+              </div>
+              <div class="formation-item">
+                <h4>Ingénieur logiciel — ESIEE Paris (filière INFO)</h4>
+                <p>Apprentissage, à partir de septembre 2026</p>
+                <span class="status upcoming">Admis</span>
+              </div>
+            </div>
+
+            <div class="formation-card current-formation-card">
+              <h3><i class="fas fa-book"></i> Ma formation actuelle</h3>
+              <div class="formation-description">
+                <h4>BUT Informatique - IUT de Villetaneuse</h4>
+                <p>
+                  Le BUT informatique est une formation que j'ai choisi en lien
+                  avec mon parcours scolaire.
+                  <br /><br />
+                  Cette formation est généraliste, elle permets aux étudiants
+                  diplomés d'avoir la possibilité de s'insérer dans le monde
+                  professionnel ainsi qu'avoir un bagage de compétences valorisé
+                  pour la poursuite d'études.
+                </p>
+                <p>
+                  Pour ma part, lors de la première année, j'ai eu quelques
+                  difficultés à m'adapter, jusque même une volonté à quitter
+                  celle-ci.
+                  <br /><br />
+                  Toutefois, via l'aide des professeurs ainsi que ma
+                  persévérance, j'ai réussi à surmonter ces complications. C'est
+                  la chose dont je suis le plus fier. Au cours de la 2ème et la
+                  3ème année, je suis parvenu à comprendre les enjeux techniques
+                  ainsi que la gestion à avoir lors de projets qui est toute
+                  aussi importante. Elle pousse notre esprit crtique et nous
+                  apprends l'importance de connaitre notre valeur, celle de nos
+                  travaux ainsi que les faire valoir.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Cybersecurity Passion -->
     <section class="cyber-focus">
-        <div class="container">
-            <div class="focus-header">
-                <h2>Une passion en complément : la cybersécurité</h2>
-                <div class="focus-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-            </div>
-            <div class="focus-content">
-                <p>
-                    Si mon objectif premier est de devenir <strong>ingénieur logiciel</strong>, la cybersécurité reste
-                    un terrain que je continue d'explorer en parallèle — notamment via le <strong>pentest</strong> et
-                    des plateformes comme <strong>Root-Me</strong>. Cette double culture influence directement ma façon
-                    de développer : penser à la sécurité dès la conception (authentification, gestion des accès,
-                    architecture) plutôt que comme une couche ajoutée après coup.
-                </p>
-                <p class="edit-marker">
-                    <i class="fas fa-pen-fancy"></i>
-                    [✍️ À RÉDIGER] Donne un exemple concret où ta sensibilité sécurité a influencé un choix technique
-                    dans un projet (AirAtlas, Boxy, ton stage au LIPN...) — par exemple le choix des tokens JWT pour Boxy,
-                    ou la gestion des autorisations dans le microservice du LIPN. La consigne valorise les exemples précis
-                    plutôt que les déclarations génériques sur la "passion pour la cybersécurité".
-                </p>
-                <div class="pentest-types">
-                    <div class="pentest-type">
-                        <h4>Black Box</h4>
-                        <p>Simulation d'attaquant externe sans connaissance du système. Approche réaliste simulant de véritables attaquants malveillants.</p>
-                    </div>
-                    <div class="pentest-type">
-                        <h4>Grey Box</h4>
-                        <p>Approche équilibrée avec informations partielles. Équilibre entre réalisme et efficacité dans l'identification des vulnérabilités.</p>
-                    </div>
-                    <div class="pentest-type">
-                        <h4>White Box</h4>
-                        <p>Test complet avec accès total aux informations système. Permet une identification approfondie des vulnérabilités.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="focus-header">
+          <h2>Une passion en complément : la cybersécurité</h2>
+          <div class="focus-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
         </div>
+        <div class="focus-content">
+          <p>
+            Si mon objectif premier est de devenir
+            <strong>ingénieur logiciel</strong>, la cybersécurité reste un
+            terrain que je continue d'explorer en parallèle, notamment via le
+            <strong>pentest</strong> et des plateformes comme
+            <strong>Root-Me</strong>. Ce monde influence directement ma façon de
+            développer. C'est à dire que je penser à la sécurité dès la
+            conception (authentification, gestion des accès, architecture)
+            plutôt que comme une couche ajoutée après coup.
+          </p>
+          <div class="pentest-types">
+            <div class="pentest-type">
+              <h4>Black Box</h4>
+              <p>
+                Simulation d'attaquant externe sans connaissance du système.
+                Approche réaliste simulant de véritables attaquants
+                malveillants.
+              </p>
+            </div>
+            <div class="pentest-type">
+              <h4>Grey Box</h4>
+              <p>
+                Approche équilibrée avec informations partielles. Équilibre
+                entre réalisme et efficacité dans l'identification des
+                vulnérabilités.
+              </p>
+            </div>
+            <div class="pentest-type">
+              <h4>White Box</h4>
+              <p>
+                Test complet avec accès total aux informations système. Permet
+                une identification approfondie des vulnérabilités.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <span class="logo-text">Dalla <span class="accent">DIALLO</span></span>
-                        <span class="logo-subtitle">Apprenti Ingénieur Logiciel</span>
-                    </div>
-                    <p>Étudiant en BUT Informatique, en route vers une formation d'ingénieur en apprentissage. Passionné par le développement logiciel, curieux de cybersécurité.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="presentation.html">Présentation</a>
-                    <a href="competences.html">Compétences</a>
-                    <a href="experience.html">Expérience</a>
-                    <a href="talents.html">Talents</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>diallo.dalla@edu.univ-paris13.fr</p>
-                    <p>IUT de Villetaneuse</p>
-                    <p>Université Sorbonne Paris Nord</p>
-                    <div class="social-links">
-                        <a href="https://github.com/Dalla936" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/dalla--diallo" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <span class="logo-text"
+                >Dalla <span class="accent">DIALLO</span></span
+              >
+              <span class="logo-subtitle">Apprenti Ingénieur Logiciel</span>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Dalla DIALLO. Tous droits réservés.</p>
-                <p>Conçu avec passion pour le développement</p>
+            <p>
+              Étudiant en BUT Informatique, en route vers l'ESIEE PARIS pour un
+              diplôme d'ingénieur en apprentissage. Passionné par le
+              développement logiciel, curieux de cybersécurité.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="presentation.html">Présentation</a>
+            <a href="competences.html">Compétences</a>
+            <a href="experience.html">Stages</a>
+            <a href="talents.html">Talents</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>diallo.dalla@edu.univ-paris13.fr</p>
+            <p>IUT de Villetaneuse</p>
+            <p>Université Sorbonne Paris Nord</p>
+            <div class="social-links">
+              <a href="https://github.com/Dalla936" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dalla--diallo"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Dalla DIALLO. Tous droits réservés.</p>
+          <p>Conçu avec passion pour le développement</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

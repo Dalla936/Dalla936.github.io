@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function initializePortfolio() {
   // Initialiser toutes les fonctionnalités
   initNavigation()
-  initThemeToggle()
   initScrollAnimations()
   initProjectFilters()
   initContactForm()
   initTypingEffect()
   initSkillsAnimation()
+  initStageTabs()
 
   console.log("🚀 Portfolio Diallo Dalla initialisé avec succès!")
 }
@@ -40,38 +40,6 @@ function initNavigation() {
       if (navToggle) navToggle.classList.remove("active")
     })
   })
-}
-
-// Theme Toggle
-function initThemeToggle() {
-  const themeToggle = document.getElementById("theme-toggle")
-  const htmlElement = document.documentElement
-  
-  // Récupérer le thème sauvegardé ou utiliser "light" par défaut
-  const savedTheme = localStorage.getItem("theme") || "light"
-  htmlElement.setAttribute("data-theme", savedTheme)
-  updateThemeIcon(savedTheme)
-  
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = htmlElement.getAttribute("data-theme")
-      const newTheme = currentTheme === "light" ? "dark" : "light"
-      
-      htmlElement.setAttribute("data-theme", newTheme)
-      localStorage.setItem("theme", newTheme)
-      updateThemeIcon(newTheme)
-    })
-  }
-}
-
-function updateThemeIcon(theme) {
-  const themeToggle = document.getElementById("theme-toggle")
-  if (themeToggle) {
-    const icon = themeToggle.querySelector("i")
-    if (icon) {
-      icon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun"
-    }
-  }
 }
 
 // Animations au scroll
@@ -174,6 +142,30 @@ function animateSkillsRadar(radarElement) {
         }, 300)
       }
     }, index * 200)
+  })
+}
+
+// Sélecteur de stage (BUT2 / BUT3)
+function initStageTabs() {
+  const tabs = document.querySelectorAll(".stage-tab")
+  const panels = document.querySelectorAll(".stage-panel")
+
+  if (tabs.length === 0) return
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-stage")
+
+      tabs.forEach((t) => {
+        const isActive = t === tab
+        t.classList.toggle("active", isActive)
+        t.setAttribute("aria-pressed", isActive)
+      })
+
+      panels.forEach((panel) => {
+        panel.classList.toggle("active", panel.getAttribute("data-stage") === target)
+      })
+    })
   })
 }
 
@@ -421,6 +413,7 @@ Développé avec passion pour la sécurité informatique!
 document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const descriptions = document.querySelectorAll('.competence-description');
+  const summarySections = document.querySelectorAll('.self-assessment-section, .sae-review-section');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -437,6 +430,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           description.style.display = 'none';
         }
+      });
+
+      // Le bilan global et l'auto-évaluation n'ont de sens que sur "Toutes"
+      summarySections.forEach(section => {
+        section.style.display = filter === 'all' ? '' : 'none';
       });
     });
   });

@@ -1,694 +1,1000 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Diallo Dalla</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compétences - DIALLO Dalla</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <span class="logo-text">DIALLO <span class="accent">Dalla</span></span>
-                    <span class="logo-subtitle">Software Engineer</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">
-                    <i class="fas fa-home"></i>
-                    <span>Accueil</span>
-                </a>
-                <a href="presentation.html" class="nav-link">
-                    <i class="fas fa-user"></i>
-                    <span>Présentation</span>
-                </a>
-                <a href="competences.html" class="nav-link active">
-                    <i class="fas fa-code"></i>
-                    <span>Compétences</span>
-                </a>
-                <a href="experience.html" class="nav-link">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Stage</span>
-                </a>
-                <a href="talents.html" class="nav-link">
-                    <i class="fas fa-star"></i>
-                    <span>Talents</span>
-                </a>
-                <a href="contact.html" class="nav-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <span class="logo-text"
+              >DIALLO <span class="accent">Dalla</span></span
+            >
+            <span class="logo-subtitle">Futur Software Engineer</span>
+          </a>
         </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+          </a>
+          <a href="presentation.html" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>Présentation</span>
+          </a>
+          <a href="competences.html" class="nav-link active">
+            <i class="fas fa-code"></i>
+            <span>Compétences</span>
+          </a>
+          <a href="experience.html" class="nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Stages</span>
+          </a>
+          <a href="talents.html" class="nav-link">
+            <i class="fas fa-star"></i>
+            <span>Talents</span>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">
-                <span class="title-number">02.</span>
-                Bilan des compétences
-            </h1>
-            <p class="page-subtitle">Projets SAÉ et compétences développées</p>
-        </div>
+      <div class="container">
+        <h1 class="page-title">
+          <span class="title-number">02.</span>
+          Bilan des compétences
+        </h1>
+        <p class="page-subtitle">Projets SAÉ et compétences développées</p>
+      </div>
     </section>
 
     <!-- Filters -->
     <section class="filters-section">
-        <div class="container">
-            <div class="competences-filter">
-                <button class="filter-btn active" data-filter="all">Toutes</button>
-                <button class="filter-btn" data-filter="realiser">Réaliser</button>
-                <button class="filter-btn" data-filter="optimiser">Optimiser</button>
-                <button class="filter-btn" data-filter="administrer">Administrer</button>
-                <button class="filter-btn" data-filter="gerer">Gérer les données</button>
-                <button class="filter-btn" data-filter="conduire">Conduire un projet</button>
-                <button class="filter-btn" data-filter="collaborer">Collaborer</button>
-            </div>
-            <!-- Explanation for "Réaliser" competence -->
-            <div class="competence-description" data-category="realiser" style="display: none;">
-                <p>
-                    La compétence "Réaliser" a été développée à travers divers projets où j'ai conçu et implémenté des solutions techniques adaptées aux besoins. 
-                    Au début, cela était très compliqué car je n'avais pas l'expérience nécessaire ni les connaissances pour créer des applications fonctionnelles.
-                    En terme de solutions techniques on peut inclure la création de sites web dynamiques, la gestion de bases de données, et les SAÉ 3.01 et 4.01 qui ont été un tremplin pour leur aspect général. Voici ci-dessous les SAÉ qui m'ont permis de développer cette compétence : 
+      <div class="container">
+        <div class="competences-filter">
+          <button class="filter-btn active" data-filter="all">Toutes</button>
+          <button class="filter-btn" data-filter="realiser">Réaliser</button>
+          <button class="filter-btn" data-filter="optimiser">Optimiser</button>
+          <button class="filter-btn" data-filter="administrer">
+            Administrer
+          </button>
+          <button class="filter-btn" data-filter="gerer">
+            Gérer les données
+          </button>
+          <button class="filter-btn" data-filter="conduire">
+            Conduire un projet
+          </button>
+          <button class="filter-btn" data-filter="collaborer">
+            Collaborer
+          </button>
+        </div>
+        <!-- Explanation for "Réaliser" competence -->
+        <div
+          class="competence-description"
+          data-category="realiser"
+          style="display: none"
+        >
+          <p>
+            La compétence "Réaliser" a été développée à travers divers projets
+            où j'ai conçu et implémenté des solutions techniques adaptées aux
+            besoins. Au début, cela était très compliqué car je n'avais pas
+            l'expérience nécessaire ni les connaissances pour créer des
+            applications fonctionnelles. En terme de solutions techniques on
+            peut inclure la création de sites web dynamiques, la gestion de
+            bases de données, et les SAÉ 3.01 et 4.01 qui ont été un tremplin
+            pour leur aspect général. Voici ci-dessous les SAÉ qui m'ont permis
+            de développer cette compétence :
+          </p>
+        </div>
+        <!-- Explanation for "Gérer les données" competence -->
+        <div
+          class="competence-description"
+          data-category="gerer"
+          style="display: none"
+        >
+          <p>
+            La compétence "Gérer les données" est une des compétences qui m'a le
+            plus intéressé dès mon entrée en BUT. J'ai pu apprendre à manipuler
+            des bases de données relationnelles, à écrire des requêtes SQL/NoSQL
+            complexes et à gérer les données de manière efficace et simple. La
+            SAÉ 3.01 et 4.01 ont été des projets clés pour développer cette
+            compétence, car elles m'ont permis de travailler sur des bases de
+            données réelles, on a du la créer nous même et de les peupler avec
+            des données venant d'un fichier excel désordonnée. Je suis passé
+            d'un étudiant qui ne connaissait pas grand chose aux bases de
+            données à un étudiant capable de concevoir et de gérer des bases de
+            données complexes.
+          </p>
+        </div>
+        <div
+          class="competence-description"
+          data-category="conduire"
+          style="display: none"
+        >
+          <p>
+            La compétence "Conduire un projet" a été développée à travers la SAÉ
+            2.05, où j'ai appris à planifier, organiser et gérer un projet de A
+            à Z. J'ai acquis des compétences en gestion de projet, en
+            planification et en la coordination d'une équipe. Au début, cela
+            était très compliqué car je n'avais pas aucune notion., je ne savais
+            pas ce qu'était réellement un projet, comment le planifier, comment
+            le gérer, comment le conduire ainsi que les bonnes pratiques. La SAÉ
+            2.05 a été un réel bénéfice pour moi et m'a permis d'utiliser toutes
+            les notions mobilisées pour les SAÉ 3.01 et 4.01.
+          </p>
+        </div>
+        <div
+          class="competence-description"
+          data-category="collaborer"
+          style="display: none"
+        >
+          <p>
+            La compétence <strong>Collaborer</strong> a été développée à travers
+            divers projets en binôme ou en groupe, où j'ai appris à travailler
+            efficacement avec d'autres personnes, à partager des idées et à
+            résoudre des problèmes ensemble. J'ai également appris à utiliser
+            des outils de collaboration tels que GitHub pour gérer le code
+            source et suivre les modifications entre collaborateurs. Au début,
+            cela était très compliqué car je n'avais pas l'habitude de
+            travailler en équipe. J'étais assez timide et je n'osais pas prendre
+            la parole. J'ai dû apprendre à communiquer efficacement, à écouter
+            les autres et à trouver des solutions en groupe. Le stage de
+            deuxième année a été un réel tremplin pour développer cette
+            compétence, car j'ai travaillé avec tout types de professionels
+            (chercheurs, ingénieurs..) et j'ai du m'adapter à eux ainsi qu'à
+            leurs méthodes de travail.
+          </p>
+        </div>
 
-                </p>
-            </div>
-            <!-- Explanation for "Gérer les données" competence -->
-            <div class="competence-description" data-category="gerer" style="display: none;">
-                <p>
-                        La compétence "Gérer les données" est une des compétences qui m'a le plus intéressé dès mon entrée en BUT. 
-                        J'ai pu apprendre à manipuler des bases de données relationnelles, à écrire des requêtes SQL/NoSQL complexes et à gérer les données de manière efficace et simple.
-                        La SAÉ 3.01 et 4.01 ont été des projets clés pour développer cette compétence, car elles m'ont permis de travailler sur des bases de données réelles, on a du la créer nous même et de les peupler avec des données venant d'un fichier excel désordonnée.
-                        Je suis passé d'un étudiant qui ne connaissait pas grand chose aux bases de données à un étudiant capable de concevoir et de gérer des bases de données complexes.
-              </p>                
-            </div>
-            <div class="competence-description" data-category="conduire" style="display: none;">
-                <p>
-                    La compétence "Conduire un projet" a été développée à travers la SAÉ 2.05, où j'ai appris à planifier, organiser et gérer un projet de A à Z. 
-                    J'ai acquis des compétences en gestion de projet, en planification et en la coordination d'une équipe.
-                    Au début, cela était très compliqué car je n'avais pas aucune notion., je ne savais pas ce qu'était réellement un projet, comment le planifier, comment le gérer, comment le conduire ainsi que les bonnes pratiques.
-                    La SAÉ 2.05 a été un réel bénéfice pour moi et m'a permis d'utiliser toutes les notions mobilisées pour les SAÉ 3.01 et 4.01.
-                </p>
-            </div>
-            <div class="competence-description" data-category="collaborer" style="display: none;">
-                <p>
-                    La compétence "Collaborer" a été développée à travers divers projets en binôme ou en groupe, où j'ai appris à travailler efficacement avec d'autres personnes, à partager des idées et à résoudre des problèmes ensemble.
-                    J'ai également appris à utiliser des outils de collaboration tels que GitHub pour gérer le code source et suivre les modifications entre collaborateurs.
-                    Au début, cela était très compliqué car je n'avais pas l'habitude de travailler en équipe. J'étais assez timide et je n'osais pas prendre la parole. J'ai dû apprendre à communiquer efficacement, à écouter les autres et à trouver des solutions en groupe.
-                    Le stage de deuxième année a été un réel tremplin pour développer cette compétence, car j'ai travaillé avec tout types de professionels (chercheurs, ingénieurs..) et j'ai du m'adapter à eux ainsi qu'à leurs méthodes de travail.
-                </p>
-            </div>
-            
-            <div class="competence-description" data-category="optimiser" style="display: none;">
-                <p>
-                    La compétence <strong>Optimiser</strong> a été développée à travers divers projets où j'ai appris à améliorer les performances, la sécurité et l'efficacité des applications et des systèmes.
-                    Au début, je négligais un peu l'optimisation, pensant que le code fonctionnait bien tel quel. Cependant, j'ai rapidement réalisé que l'optimisation était essentielle pour garantir la robustesse des applications et la satisfaction des utilisateurs.
-                    J'ai acquis des compétences en optimisation de code, en gestion des ressources et en amélioration de l'expérience utilisateur.
-                    Ce développemnt peut s'illustrer par l'utilisation de la SAÉ 1.01 Santa Clauss qui m'a permis d'être plus à l'aise avec Python. Cette facilité m'a aidé
-                    pour le script de nettoyage dans la SAÉ 3.01.
-                </p>
-            </div>
-            <div class="competence-description" data-category="administrer" style="display: none;">
-                <p>
-                    Concernant la compétence <strong>Administrer</strong>, j'ai appris son importance lors de la SAÉ 3.01 et 4.01, où j'ai dû gérer les connexions, les permissions et la sécurité des données.
-                    J'ai acquis des compétences en administration de bases de données, en gestion des utilisateurs et en sécurité des applications lors de mon stage.
-                    J'ai aussi pu mobiliser cette connaisance via Docker.
-
+        <div
+          class="competence-description"
+          data-category="optimiser"
+          style="display: none"
+        >
+          <p>
+            La compétence <strong>Optimiser</strong> a été développée à travers
+            divers projets où j'ai appris à améliorer les performances, la
+            sécurité et l'efficacité des applications et des systèmes. Au début,
+            je négligais un peu l'optimisation, pensant que le code fonctionnait
+            bien tel quel. Cependant, j'ai rapidement réalisé que l'optimisation
+            était essentielle pour garantir la robustesse des applications et la
+            satisfaction des utilisateurs. J'ai acquis des compétences en
+            optimisation de code, en gestion des ressources et en amélioration
+            de l'expérience utilisateur. Ce développemnt peut s'illustrer par
+            l'utilisation de la SAÉ 1.01 Santa Clauss qui m'a permis d'être plus
+            à l'aise avec Python. Cette facilité m'a aidé pour le script de
+            nettoyage dans la SAÉ 3.01.
+          </p>
+        </div>
+        <div
+          class="competence-description"
+          data-category="administrer"
+          style="display: none"
+        >
+          <p>
+            Concernant la compétence <strong>Administrer</strong>, j'ai appris
+            son importance lors de la SAÉ 3.01 et 4.01, où j'ai dû gérer les
+            connexions, les permissions et la sécurité des données. J'ai acquis
+            des compétences en administration de bases de données, en gestion
+            des utilisateurs et en sécurité des applications lors de mon stage.
+            J'ai aussi pu mobiliser cette connaisance via Docker.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Grid -->
     <section class="projects-section">
-        <div class="container">
-            <div class="projects-grid">
-                <!-- SAE Santa Claus -->
-                <div class="project-card" data-category="realiser collaborer optimiser ">
-                    <div class="project-image">
-                        <img src="assets/images/santa.png" alt="SAE Santa Claus">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 1.01 Santa Clauss</h3>
-                            <span class="project-type">Python - Algorithmes</span>
-                        </div>
-                        <p>Première SAÉ , développement d'un programme Python afin d'optimiser le parcours du père noël en ayant pour objectif de livrer les cadeaux à temps.
-                            Travail en équipe de 2 personnes</p>
-                        <div class="project-tech">
-                            <span class="tech-tag python">
-                                <i class="fab fa-python"></i>
-                                Python
-                            </span>
-                            <span class="tech-tag">Algorithmes</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="projects-grid">
+          <!-- SAE Santa Claus -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer optimiser "
+          >
+            <div class="project-image">
+              <img src="assets/images/santa.png" alt="SAE Santa Claus" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
                 </div>
-                <!-- SAE 3.01 Développement complexe d'une application -->
-                <div class="project-card" data-category="realiser collaborer gerer conduire Travailler administrer optimiser">
-                    <div class="project-image">
-                        <img src="assets/images/CaptureS301.png" alt="SAE 3.01 Developpement complexe d'une application">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/marewane-fertikh/SAE_4.01_D2_Public" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="realiser collaborer gerer conduire administrer optimiser">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 3.01 Développement complexe d'une application</h3>
-                            <span class="project-type">PHP, HTML, CSS, JS, Python - Programmation</span>
-                        </div>
-                        <p>Développement d'une application complexe permettant de visualiser l'ensemble des jeux de société de la bibliothéque de l'Université Paris 13.
-                            Le projet comprend la création d'une interface utilisateur/administrateur/gestionnaire, la gestion des données et l'implémentation d'algorithmes de recherche.</p>
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag python">
-                                <i class="fab fa-python"></i>
-                                Python
-                            </span>
-                            <span class="tech-tag">HTML/CSS/JSS/PHP</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag administrer">Administrer</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                            <span class="competence-tag gerer">Gérer les données</span>
-                            <span class="competence-tag conduire">Conduire un projet</span>
-                            <span class="competence-tag equipe">Travailler en équipe</span>
-                            <span class="competence-tag optimiser">Optimiser</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SAE Calculatrice Java -->
-                <div class="project-card" data-category="realiser">
-                    <div class="project-image">
-                        <img src="assets/images/calculatrice.png" alt="Calculatrice Java">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Calculatrice Java</h3>
-                            <span class="project-type">Application Desktop</span>
-                        </div>
-                        <p>Création d'une application de calculatrice avec gestion d'erreurs et interface utilisateur intuitive.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag java">
-                                <i class="fab fa-java"></i>
-                                Java
-                            </span>
-                            <span class="tech-tag">POO</span>
-                            <span class="tech-tag">Swing</span>
-                            <span class="tech-tag">Try-Catch</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SAE Site Web -->
-                <div class="project-card" data-category="realiser collaborer">
-                    <div class="project-image">
-                        <img src="assets/images/S105.png" alt="Site Web">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 1.05 Recueil de besoins</h3>
-                            <span class="project-type">Client-Développeur</span>
-                        </div>
-                        <p>Projet en binôme alternant les rôles client/développeur. Conception de maquettes et développement web via Wix</p>
-                        <div class="project-tech">
-                            <span class="tech-tag html">
-                                <i class="fab fa-html5"></i>
-                                HTML
-                            </span>
-                            <span class="tech-tag css">
-                                <i class="fab fa-css3-alt"></i>
-                                CSS
-                            </span>
-                            <span class="tech-tag wix">
-                                <i class="fab fa-wix"></i>
-                                Wix
-                            </span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SAE Base de données -->
-                <div class="project-card" data-category="gerer">
-                    <div class="project-image">
-                        <img src="assets/images/database.png" alt="Base de données">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 1.04 Création BD</h3>
-                            <span class="project-type">PostgreSQL</span>
-                        </div>
-                        <p>Peuplement de tables à partir d'un fichier CSV et requêtes SQL complexes. Modélisation avec DB Designer.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag sql">
-                                <i class="fas fa-database"></i>
-                                PostgreSQL
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-sql"></i>
-                                SQL
-                            </span>
-                            <span class="tech-tag">CSV</span>
-                            <span class="tech-tag">Modélisation</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag gerer">Gérer les données</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SAE 4.01 -->
-                <div class="project-card" data-category="realiser collaborer conduire équipe gerer administrer optimiser ">
-                    <div class="project-image">
-                        <img src="assets/images/CaptureS401.png" alt="SAE 4.01 $">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/Dalla936/SAE4.01.D2" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 4.01 Développement complexe d'une application</h3>
-                            <span class="project-type">PHP, HTML, CSS, JS - Programmation</span>
-                        </div>
-                        <p>Reprise du projet SAÉ 4.01, Amélioration du projet avec l'ajout de nouvelles fonctionnalités non abouties, renforcement de la sécurité, amélioration de l'aspect visuel</p>
-                        <div class="project-tech">
-                            <span class="tech-tag PostgreSQL">
-                                <i class="fab fa-postgresql"></i>
-                                PostgreSQL
-                            </span>
-                            <span class="tech-tag"> JavaScript</span>
-                            <span class="tech-tag">HTML/CSS/JS</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                            <span class="competence-tag gerer">Gérer les données</span>
-                            <span class="competence-tag conduire">Conduire un projet</span>
-                            <span class="competence-tag equipe">Travailler en équipe</span>
-                            <span class="competence-tag administrer">Administrer</span>
-                            <span class="competence-tag optimiser">Optimiser</span>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SAE 5.01 -->
-                <div class="project-card" data-category="realiser collaborer conduire équipe gerer administrer optimiser ">
-                    <div class="project-image">
-                        <img src="assets/images/Projet_Airatlas.png" alt="SAE 5.01">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/aariisto/MobilleApp_Recommandation_De_Voyage" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>AirAtlas</h3>
-                            <span class="project-type">ReactNative, Python, MiniLM</span>
-                        </div>
-                        <p>Développement d'une application mobile permettant la recommandation de
-                            voyages basée sur les besoins de l’utilisateur. 
-                            <br>
-                            Cette application m'a permis de développer mes compétences en React Native, Python pour la récupération des données/ création de script pour la base de données.
-                            <br>
-                            Par ailleurs, notre équipe a eu du mal à se décider sur quel algorthime implémenter, nous en avions 2.
-                            <br>
-                            Nous avons choisi d'utiliser MiniLM pour sa rapidité ainsi que 
-                            la profondeur qu'il nous a permis d'avoir dans les recommandations.
-                            <br>
-                            Certains ratages ont eu lieu, par conséquent, nous avons décidé de mettre en oeuvre des réunions agiles plus fréquemment.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag PostgreSQL">
-                                <i class="fab fa-postgresql"></i>
-                                PostgreSQL
-                            </span>
-                            <span class="tech-tag"> JavaScript</span>
-                            <span class="tech-tag">HTML/CSS/JS</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                            <span class="competence-tag gerer">Gérer les données</span>
-                            <span class="competence-tag conduire">Conduire un projet</span>
-                            <span class="competence-tag equipe">Travailler en équipe</span>
-                            <span class="competence-tag administrer">Administrer</span>
-                            <span class="competence-tag optimiser">Optimiser</span>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SAE Gestion de projet -->
-                <div class="project-card" data-category="conduire equipe">
-                    <div class="project-image">
-                        <img src="assets/images/gantt.png" alt="Gestion de projet">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-chart-gantt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>SAÉ 2.05 Gestion d'un projet</h3>
-                            <span class="project-type">Gestion de projet</span>
-                        </div>
-                        <p>Projet de rénovation complète d'une chambre avec cahier des charges, budget, planning PERT, Gantt, planification et gestion d'équipe.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PERT</span>
-                            <span class="tech-tag">Gantt</span>
-                            <span class="tech-tag">Budget</span>
-                            <span class="tech-tag">Planning</span>
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag conduire">Conduire un projet</span>
-                            <span class="competence-tag equipe">Travailler en équipe</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Stage S3 -->
-                <div class="project-card" data-category="realiser collaborer conduire équipe gerer administrer optimiser">
-                    <div class="project-image">
-                        <img src="assets/images/LIPN.png" alt="Stage S3">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Stage de 10 semaines au LIPN</h3>
-                            <span class="project-type">Développeur WordPress</span>
-                        </div>
-                        <p> Stage de 10 semaines au sein du LIPN (Laboratoire d'Informatique de Paris Nord). Développement du site pour le département informatique
-                            de l'Institut Galilée. Participation à la création de contenu, optimisation du site et gestion des données.</p>
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-
-                        </div>
-                        <div class="project-competence">
-                            <span class="competence-tag realiser">Réaliser</span>
-                            <span class="competence-tag collaborer">Collaborer</span>
-                            <span class="competence-tag gerer">Gérer les données</span>
-                            <span class="competence-tag conduire">Conduire un projet</span>
-                            <span class="competence-tag administrer">Administrer</span>
-                            <span class="competence-tag optimiser">Optimiser</span>           
-                            <span class="competence-tag equipe">Travailler en équipe</span>           
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ 1.01 Santa Clauss</h3>
+                <span class="project-type">Python - Algorithmes</span>
+              </div>
+              <p>
+                Première SAÉ , développement d'un programme Python afin
+                d'optimiser le parcours du père noël en ayant pour objectif de
+                livrer les cadeaux à temps. Travail en équipe de 2 personnes
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag python">
+                  <i class="fab fa-python"></i>
+                  Python
+                </span>
+                <span class="tech-tag">Algorithmes</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+          <!-- SAE 3.01 Développement complexe d'une application -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer gerer conduire Travailler administrer optimiser"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/CaptureS301.png"
+                alt="SAE 3.01 Developpement complexe d'une application"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/marewane-fertikh/SAE_4.01_D2_Public"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ 3.01 « Boxy »</h3>
+                <span class="project-type"
+                  >PHP, HTML, CSS, JS, Python - Programmation</span
+                >
+              </div>
+              <p>
+                <strong>Boxy</strong> : application de référencement permettant
+                de visualiser l'ensemble des jeux de société de la bibliothèque
+                de l'Université Paris 13. Le projet comprend la création d'une
+                interface utilisateur/administrateur/gestionnaire, la gestion
+                des données et l'implémentation d'algorithmes de recherche.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag python">
+                  <i class="fab fa-python"></i>
+                  Python
+                </span>
+                <span class="tech-tag">HTML/CSS/JSS/PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag administrer">Administrer</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+                <span class="competence-tag gerer">Gérer les données</span>
+                <span class="competence-tag conduire">Conduire un projet</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+
+          <!-- SAE Site Web -->
+          <div class="project-card" data-category="realiser collaborer">
+            <div class="project-image">
+              <img src="assets/images/S105.png" alt="Site Web" />
+              <div class="project-overlay">
+                <div class="project-links"></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ 1.05 Recueil de besoins</h3>
+                <span class="project-type">Client-Développeur</span>
+              </div>
+              <p>
+                Projet en binôme alternant les rôles client/développeur.
+                Conception de maquettes et développement web via Wix
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag html">
+                  <i class="fab fa-html5"></i>
+                  HTML
+                </span>
+                <span class="tech-tag css">
+                  <i class="fab fa-css3-alt"></i>
+                  CSS
+                </span>
+                <span class="tech-tag wix">
+                  <i class="fab fa-wix"></i>
+                  Wix
+                </span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+          <!-- SAE 4.01 -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer conduire équipe gerer administrer optimiser "
+            data-gallery="S401_podium.png"
+          >
+            <div class="project-image">
+              <img src="assets/images/CaptureS401.png" alt="SAE 4.01 $" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Dalla936/SAE4.01.D2"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ 4.01 « Boxy » (reprise)</h3>
+                <span class="project-type"
+                  >PHP, HTML, CSS, JS - Programmation</span
+                >
+              </div>
+              <p>
+                Reprise et approfondissement de <strong>Boxy</strong> (SAÉ 3.01)
+                : ajout des fonctionnalités restées inabouties, renforcement de
+                la sécurité — authentification par tokens JWT — et amélioration
+                de l'aspect visuel.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag PostgreSQL">
+                  <i class="fab fa-postgresql"></i>
+                  PostgreSQL
+                </span>
+                <span class="tech-tag"> JavaScript</span>
+                <span class="tech-tag">HTML/CSS/JS</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+                <span class="competence-tag gerer">Gérer les données</span>
+                <span class="competence-tag conduire">Conduire un projet</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+                <span class="competence-tag administrer">Administrer</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+
+          <!-- SAE 5.01 -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer conduire équipe gerer administrer optimiser "
+            data-gallery="AirAt_accueil.png, AirAt_explorer.png, AirAt_fav.png, AirAt_profil.png"
+          >
+            <div class="project-image">
+              <img src="assets/images/Projet_Airatlas.png" alt="SAE 5.01" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/aariisto/MobilleApp_Recommandation_De_Voyage"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>AirAtlas — SAÉ 5.01</h3>
+                <span class="project-type">ReactNative, Python, MiniLM</span>
+              </div>
+              <p>
+                Développement d'une application mobile permettant la
+                recommandation de voyages basée sur les besoins de
+                l’utilisateur.
+                <br />
+                Cette application m'a permis de développer mes compétences en
+                React Native, Python pour la récupération des données/ création
+                de script pour la base de données.
+                <br />
+                Par ailleurs, notre équipe a eu du mal à se décider sur quel
+                algorthime implémenter, nous en avions 2.
+                <br />
+                Nous avons choisi d'utiliser MiniLM pour sa rapidité ainsi que
+                la profondeur qu'il nous a permis d'avoir dans les
+                recommandations : plus de 10&nbsp;000 points d'intérêt traités
+                pour un temps d'exécution moyen de 5,38&nbsp;ms.
+                <br />
+                Certains ratages ont eu lieu, par conséquent, nous avons décidé
+                de mettre en oeuvre des réunions agiles plus fréquemment.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag PostgreSQL">
+                  <i class="fab fa-postgresql"></i>
+                  PostgreSQL
+                </span>
+                <span class="tech-tag"> JavaScript</span>
+                <span class="tech-tag">HTML/CSS/JS</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+                <span class="competence-tag gerer">Gérer les données</span>
+                <span class="competence-tag conduire">Conduire un projet</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+                <span class="competence-tag administrer">Administrer</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+
+          <!-- SAE Gestion de projet -->
+          <div class="project-card" data-category="conduire equipe">
+            <div class="project-image">
+              <img src="assets/images/gantt.png" alt="Gestion de projet" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link">
+                    <i class="fas fa-chart-gantt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ 2.05 Gestion d'un projet</h3>
+                <span class="project-type">Gestion de projet</span>
+              </div>
+              <p>
+                Projet de rénovation complète d'une chambre avec cahier des
+                charges, budget, planning PERT, Gantt, planification et gestion
+                d'équipe.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PERT</span>
+                <span class="tech-tag">Gantt</span>
+                <span class="tech-tag">Budget</span>
+                <span class="tech-tag">Planning</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag conduire">Conduire un projet</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage S3 -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer conduire équipe gerer administrer optimiser"
+            data-gallery="IG_Accueil.png, IG_liste.png, IG_ajout.png, IG_modif.png, IG_gestion.png"
+          >
+            <div class="project-image">
+              <img src="assets/images/LIPN.png" alt="Stage S3" />
+              <div class="project-overlay">
+                <div class="project-links"></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Stage BUT 2</h3>
+                <span class="project-type">Développeur WordPress PHP</span>
+              </div>
+              <p>
+                Stage de 10 semaines au sein du Laboratoire d'Informatique de
+                Paris Nord (CNRS). J'ai participé au développement du site web
+                pour le département informatique de l'Institut Galilée.
+                Participation à la création de contenu via des plugins PHP,
+                optimisation du site et gestion des données.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+                <span class="competence-tag gerer">Gérer les données</span>
+                <span class="competence-tag conduire">Conduire un projet</span>
+                <span class="competence-tag administrer">Administrer</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
+
+          <!-- SAE S6 Diagramme de Voronoi -->
+          <div
+            class="project-card"
+            data-category="realiser collaborer optimiser"
+            data-gallery="voronoi.png"
+          >
+            <div class="project-image">
+              <svg
+                class="voronoi-thumb"
+                viewBox="0 0 400 200"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                role="img"
+                aria-label="Aperçu stylisé d'un diagramme de Voronoi"
+              >
+                <rect width="400" height="200" fill="#1a1a2e" />
+                <g stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5">
+                  <polygon
+                    points="0,0 145,0 160,95 0,100"
+                    fill="#8b5cf6"
+                    fill-opacity="0.35"
+                  />
+                  <polygon
+                    points="145,0 290,0 300,110 160,95"
+                    fill="#00d4ff"
+                    fill-opacity="0.30"
+                  />
+                  <polygon
+                    points="290,0 400,0 400,110 300,110"
+                    fill="#39ff14"
+                    fill-opacity="0.22"
+                  />
+                  <polygon
+                    points="0,100 160,95 130,200 0,200"
+                    fill="#e94560"
+                    fill-opacity="0.30"
+                  />
+                  <polygon
+                    points="160,95 300,110 340,200 130,200"
+                    fill="#f39c12"
+                    fill-opacity="0.28"
+                  />
+                  <polygon
+                    points="300,110 400,110 400,200 340,200"
+                    fill="#00d4ff"
+                    fill-opacity="0.40"
+                  />
+                </g>
+                <g fill="#ffffff">
+                  <circle cx="76" cy="49" r="3.5" />
+                  <circle cx="224" cy="51" r="3.5" />
+                  <circle cx="347" cy="55" r="3.5" />
+                  <circle cx="72" cy="149" r="3.5" />
+                  <circle cx="232" cy="151" r="3.5" />
+                  <circle cx="360" cy="155" r="3.5" />
+                </g>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/RezzagYoussouf/SAE_Voronoi_GROUPED"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>SAÉ S6 « Diagramme de Voronoi »</h3>
+                <span class="project-type">Python - Algorithmique & IA</span>
+              </div>
+              <p>
+                À partir d'un fichier de points 2D, calcul et affichage d'un
+                diagramme de Voronoi, avec export des résultats en SVG. Le
+                projet s'est déroulé en 3 phases : une implémentation "à la
+                main" sans assistance, puis une seconde version réalisée avec 4
+                IA génératives (ChatGPT, Gemini, DeepSeek, Claude) sur le même
+                cahier des charges, et enfin un rapport d'analyse des risques
+                liés à l'usage de l'IA en développement, chaque membre du groupe
+                de 6 traitant une thématique différente.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag python">
+                  <i class="fab fa-python"></i>
+                  Python
+                </span>
+                <span class="tech-tag">Géométrie algorithmique</span>
+                <span class="tech-tag">SVG</span>
+                <span class="tech-tag">
+                  <i class="fas fa-robot"></i>
+                  IA générative
+                </span>
+              </div>
+              <div class="project-competence">
+                <span class="competence-tag realiser">Réaliser</span>
+                <span class="competence-tag collaborer">Collaborer</span>
+                <span class="competence-tag optimiser">Optimiser</span>
+                <span class="competence-tag equipe">Travailler en équipe</span>
+              </div>
+              <p class="project-card-hint">
+                <i class="fas fa-circle-info"></i> Cliquer pour le détail
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Synthèse & auto-évaluation -->
     <section class="self-assessment-section">
-        <div class="container">
-            <h2 class="section-title">Où j'en suis vraiment</h2>
-            <p class="edit-marker">
-                <i class="fas fa-pen-fancy"></i>
-                [✍️ À RÉDIGER] La consigne demande un tableau récapitulatif avec <strong>synthèse et auto-évaluation
-                d'au moins 3 compétences</strong>. J'ai pré-rempli les colonnes "Preuves" à partir de ce que tu as
-                déjà écrit plus haut. Pour la colonne "Niveau atteint" : ouvre le <strong>référentiel national du
-                BUT Informatique</strong> (parcours Réalisation d'Applications) et identifie, pour chaque compétence,
-                à quel <em>niveau officiel (1, 2 ou 3)</em> et quels <em>apprentissages critiques</em> tu corresponds
-                réellement — ne te contente pas d'un ressenti, appuie-toi sur les descripteurs du référentiel.
-                Pour "Auto-évaluation", explique en quoi un projet précis illustre (ou met en doute) ce niveau.
-            </p>
-            <div class="table-wrapper">
-                <table class="assessment-table">
-                    <thead>
-                        <tr>
-                            <th>Compétence</th>
-                            <th>Niveau atteint <span class="edit-tag">[✍️ réf. au référentiel]</span></th>
-                            <th>Preuves (SAÉ / projets / stages)</th>
-                            <th>Auto-évaluation <span class="edit-tag">[✍️ à compléter]</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Réaliser</td>
-                            <td class="edit-cell">Niveau du référentiel + apprentissages critiques visés ?</td>
-                            <td>SAÉ 3.01, SAÉ 4.01, Calculatrice Java, AirAtlas, Boxy</td>
-                            <td class="edit-cell">Qu'est-ce que tu sais concevoir et livrer seul aujourd'hui que tu ne savais pas faire en BUT1 ?</td>
-                        </tr>
-                        <tr>
-                            <td>Gérer les données</td>
-                            <td class="edit-cell">Niveau du référentiel + apprentissages critiques visés ?</td>
-                            <td>SAÉ 3.01, SAÉ 4.01, SAÉ 1.04 (Création BD), Boxy (modélisation SQL + JWT)</td>
-                            <td class="edit-cell">Quelle est la limite de ce que tu sais faire aujourd'hui en bases de données ?</td>
-                        </tr>
-                        <tr>
-                            <td>Conduire un projet</td>
-                            <td class="edit-cell">Niveau du référentiel + apprentissages critiques visés ?</td>
-                            <td>SAÉ 2.05 (Gestion d'un projet), stages au LIPN (sprints agiles, réunions hebdomadaires)</td>
-                            <td class="edit-cell">As-tu déjà porté la responsabilité d'un planning ou d'une décision d'équipe ? Comment ça s'est passé ?</td>
-                        </tr>
-                        <tr>
-                            <td>Collaborer</td>
-                            <td class="edit-cell">Niveau du référentiel + apprentissages critiques visés ?</td>
-                            <td>SAÉ en binôme/groupe, stages LIPN (équipe de chercheurs et ingénieurs), Git/GitHub</td>
-                            <td class="edit-cell">Quel a été ton vrai rôle dans une situation de désaccord ou de répartition des tâches ?</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Où j'en suis vraiment</h2>
+        <p>
+          Sur le papier, en fin de BUT3, le niveau visé pour chacune des six
+          compétences est le
+          <strong>niveau 3</strong> du référentiel — celui d'une personne
+          capable de mener une mission de bout en bout, en autonomie, avec une
+          vraie conscience des enjeux de qualité et de sécurité. Le tableau
+          ci-dessous est mon auto-évaluation honnête : où j'en suis vraiment,
+          avec mes preuves et mes limites.
+        </p>
+        <div class="table-wrapper">
+          <table class="assessment-table">
+            <thead>
+              <tr>
+                <th>Compétence</th>
+                <th>Niveau atteint</th>
+                <th>Preuves (SAÉ / projets / stages)</th>
+                <th>Auto-évaluation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Réaliser</td>
+                <td>
+                  Niveau 3 — concevoir et réaliser une application complète, de
+                  la base de données à l'interface, en autonomie.
+                </td>
+                <td>Boxy (SAÉ 3.01 &amp; 4.01), AirAtlas</td>
+                <td>
+                  Entre santa clauss (mon tout premier projet, en BUT1) et
+                  AirAtlas aujourd'hui, l'écart est énorme. Je sais désormais
+                  concevoir une application de bout en bout et la déployer avec
+                  Docker. J'ai une expertise pour savoir quel implémentation
+                  privilégier, quelle architecture utilisé et savoir faire des
+                  concessions. Comme limite, je pourrais dire que sur Boxy comme
+                  sur AirAtlas, j'ai toujours travaillé en équipe. Mon niveau
+                  d'autonomie réelle sur un projet entier s'est confirmé durant
+                  mes deux stages et reste à s'améliorer avec l'alternance.
+                </td>
+              </tr>
+              <tr>
+                <td>Gérer les données</td>
+                <td>
+                  Niveau 3 — concevoir, sécuriser et administrer une base de
+                  données complexe.
+                </td>
+                <td>
+                  Boxy (SAÉ 3.01 &amp; 4.01 — modélisation SQL, peuplement
+                  depuis un fichier Excel, authentification JWT, site web
+                  dynamique)
+                </td>
+                <td>
+                  Entre la modélisation SQL de Boxy et l'ajout de
+                  l'authentification JWT en SAÉ 4.01, je me sens solide sur la
+                  conception et la sécurisation d'une base. Malheursement, je
+                  n'ai pas encore eu à gérer un gros volume de données ni à
+                  optimiser des requêtes à grande échelle (indexation avancée,
+                  NoSQL en production). C'est un axe que je veux creuser en
+                  alternance afin d'évaluer mes compétences après le BUT.
+                </td>
+              </tr>
+              <tr>
+                <td>Conduire un projet</td>
+                <td>
+                  Niveau 3 — piloter un projet de bout en bout : planification,
+                  risques, communication.
+                </td>
+                <td>
+                  SAÉ 2.05 (Gestion d'un projet), stages au LIPN (sprints
+                  agiles, réunions hebdomadaires, documentations, recueil de
+                  besoins), AirAtlas
+                </td>
+                <td>
+                  La SAÉ 2.05 m'a donné les outils (Gantt, PERT, budget), et mes
+                  deux stages au LIPN m'ont fait vivre le rythme réel d'un
+                  projet (sprints, réunions hebdomadaires, rapports,
+                  documentations).
+                </td>
+              </tr>
+              <tr>
+                <td>Collaborer</td>
+                <td>
+                  Niveau 3 — travailler en équipe pluridisciplinaire et gérer
+                  les désaccords.
+                </td>
+                <td>
+                  SAÉ en binôme/groupe, stages LIPN (équipe de
+                  chercheurs/ingénieurs, stagiares), Git/GitHub
+                </td>
+                <td>
+                  Le stage WordPress m'a appris à collaborer avec des
+                  chercheurs/ingénieurs, professeurs universitaires très
+                  différents de moi, et AirAtlas m'a confronté à un vrai
+                  désaccord d'équipe (le choix de l'algorithme de
+                  recommandation), résolu en augmentant la fréquence des
+                  réunions agiles et des concessions pour la performance. Limite
+                  : ce désaccord a été géré collectivement — je n'ai pas encore
+                  eu à arbitrer ou médier un conflit moi-même.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </section>
 
     <!-- Bilan SAÉ S5 / S6 -->
     <section class="sae-review-section">
-        <div class="container">
-            <h2 class="section-title">S5, S6 : deux ans qui m'ont transformé</h2>
-            <p class="edit-marker">
-                <i class="fas fa-pen-fancy"></i>
-                [✍️ À RÉDIGER] La consigne BUT 3 demande un bilan des SAÉ de S5 et S6 — distinct de la liste de
-                projets ci-dessus. Pour chacune, raconte : le contexte/l'enjeu, ta tâche précise, une difficulté
-                rencontrée et comment tu l'as surmontée, et ce que tu en retiens pour la suite (ton stage, ton
-                projet d'apprentissage à l'ESIEE...).
-            </p>
-            <ul class="edit-hints">
-                <li><strong>SAÉ de S5 :</strong> laquelle, quel a été ton rôle, quel a été le déclic ou la difficulté principale ?</li>
-                <li><strong>SAÉ 4.01 (S6) :</strong> qu'est-ce que ce projet a changé dans ta façon de travailler par rapport aux SAÉ précédentes ?</li>
-            </ul>
+      <div class="container">
+        <h2 class="section-title">
+          S5 &amp; S6 : le bilan de ma dernière année
+        </h2>
+        <div>
+          <p>
+            <strong>SAÉ 5.01 — AirAtlas (S5, oct. 2025 - janv. 2026) :</strong>
+            l'enjeu était de construire une application mobile de recommandation
+            de voyages (hors-ligne) capable de traiter un gros volume de données
+            (plus de 10&nbsp;000 points d'intérêt) avec un algorithme NLP
+            performant. Dans ce projet, ma tâche principale était la partie data
+            (scripts Python de récupération et de préparation des données), la
+            partie base de données (scripts de migrations postgresql vers
+            sqlite, normalisation des données) et une partie de l'interface
+            React Native. La principale difficulté n'a pas été technique mais
+            collective. Pour information, l'équipe hésitait entre deux
+            algorithmes de recommandation, et cette indécision nous a fait
+            perdre du temps sur une piste finalement abandonnée. On a tranché
+            pour MiniLM (rapidité et qualité des recommandations, 5,38&nbsp;ms
+            d'exécution) et, surtout, on a augmenté la fréquence des réunions
+            agiles pour éviter qu'un désaccord ne traîne aussi longtemps la
+            prochaine fois. Ce que j'en retiens c'est qu'un blocage de choix
+            technique doit être remonté en réunion tout de suite, pas géré en
+            silence chacun de son côté car certains pourraient développer vers
+            une mauvaise direction. Cette capacité à prendre des décisions
+            rapidement est un réflexe que je veux garder et peaufiner en
+            alternance.
+          </p>
+          <p>
+            <strong>S6 — le stage de fin de BUT et Voronoi:</strong> dans mon
+            parcours, le S6 est assez spécial, nous avons peu de temps car notre
+            stage de fin de BUT commence très tôt (mars). Concernant mon stage
+            d'ingénierie logicielle au LIPN (mars-juin 2026), tu peux retrouver
+            son bilan complet dans la section
+            <a href="experience.html">Stages</a>.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <span class="logo-text">Diallo<span class="accent">Dalla</span></span>
-                        <span class="logo-subtitle">Apprenti Ingénieur Logiciel</span>
-                    </div>
-                    <p>Étudiant en BUT Informatique, en route vers une formation d'ingénieur en apprentissage. Passionné par le développement logiciel, curieux de cybersécurité.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="presentation.html">Présentation</a>
-                    <a href="competences.html">Compétences</a>
-                    <a href="experience.html">Expérience</a>
-                    <a href="talents.html">Talents</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>diallo.dalla@edu.univ-paris13.fr</p>
-                    <p>IUT de Villetaneuse</p>
-                    <p>Université Sorbonne Paris Nord</p>
-                    <div class="social-links">
-                        <a href="https://github.com/diallodalla" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/diallodalla" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <span class="logo-text"
+                >DIALLO<span class="accent">Dalla</span></span
+              >
+              <span class="logo-subtitle">Apprenti Ingénieur Logiciel</span>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Diallo Dalla. Tous droits réservés.</p>
-                <p>Conçu avec passion pour le développement</p>
+            <p>
+              Étudiant en BUT Informatique, en route vers une formation
+              d'ingénieur en apprentissage. Passionné par le développement
+              logiciel, curieux de cybersécurité.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="presentation.html">Présentation</a>
+            <a href="competences.html">Compétences</a>
+            <a href="experience.html">Stages</a>
+            <a href="talents.html">Talents</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>diallo.dalla@edu.univ-paris13.fr</p>
+            <p>IUT de Villetaneuse</p>
+            <p>Université Sorbonne Paris Nord</p>
+            <div class="social-links">
+              <a href="https://github.com/Dalla936" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/dalla--diallo" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Dalla DIALLO. Tous droits réservés.</p>
+          <p>Conçu avec passion pour le développement</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Project Modal -->
     <div class="project-modal" id="projectModal">
-        <div class="project-modal-overlay" data-modal-close></div>
-        <div class="project-modal-content">
-            <button class="project-modal-close" data-modal-close aria-label="Fermer">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="project-modal-gallery">
-                <button class="gallery-nav gallery-prev" aria-label="Image précédente">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <img class="project-modal-image" src="" alt="">
-                <button class="gallery-nav gallery-next" aria-label="Image suivante">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            <div class="project-modal-info">
-                <h3 class="project-modal-title"></h3>
-                <p class="project-modal-description"></p>
-            </div>
+      <div class="project-modal-overlay" data-modal-close></div>
+      <div class="project-modal-content">
+        <button
+          class="project-modal-close"
+          data-modal-close
+          aria-label="Fermer"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="project-modal-gallery">
+          <button
+            class="gallery-nav gallery-prev"
+            aria-label="Image précédente"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <img class="project-modal-image" src="" alt="" />
+          <button class="gallery-nav gallery-next" aria-label="Image suivante">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+        <p class="project-modal-gallery-caption" style="display: none"></p>
+        <div class="project-modal-info">
+          <h3 class="project-modal-title"></h3>
+          <p class="project-modal-description"></p>
+        </div>
+      </div>
     </div>
 
     <script src="js/main.js"></script>
     <script>
-        // Modal projet : clic sur une vignette -> aperçu agrandi avec navigation.
-        // Pour ajouter d'autres captures à un projet, ajoute sur sa .project-card :
-        // data-gallery="image1.png, image2.png, image3.png"
-        (function () {
-            const modal = document.getElementById('projectModal');
-            if (!modal) return;
+      // Modal projet : clic sur une vignette -> aperçu agrandi avec navigation.
+      // Pour ajouter d'autres captures à un projet, ajoute sur sa .project-card :
+      // data-gallery="image1.png, image2.png, image3.png"
+      (function () {
+        const modal = document.getElementById("projectModal");
+        if (!modal) return;
 
-            const imgEl = modal.querySelector('.project-modal-image');
-            const titleEl = modal.querySelector('.project-modal-title');
-            const descEl = modal.querySelector('.project-modal-description');
-            const prevBtn = modal.querySelector('.gallery-prev');
-            const nextBtn = modal.querySelector('.gallery-next');
+        const imgEl = modal.querySelector(".project-modal-image");
+        const titleEl = modal.querySelector(".project-modal-title");
+        const descEl = modal.querySelector(".project-modal-description");
+        const captionEl = modal.querySelector(".project-modal-gallery-caption");
+        const prevBtn = modal.querySelector(".gallery-prev");
+        const nextBtn = modal.querySelector(".gallery-next");
 
-            let images = [];
-            let index = 0;
+        let images = [];
+        let index = 0;
 
-            function showImage(i) {
-                index = (i + images.length) % images.length;
-                imgEl.src = images[index];
-                const hasMultiple = images.length > 1;
-                prevBtn.style.display = hasMultiple ? 'flex' : 'none';
-                nextBtn.style.display = hasMultiple ? 'flex' : 'none';
-            }
+        function showImage(i) {
+          index = (i + images.length) % images.length;
+          imgEl.src = images[index];
+          const hasMultiple = images.length > 1;
+          prevBtn.style.display = hasMultiple ? "flex" : "none";
+          nextBtn.style.display = hasMultiple ? "flex" : "none";
+        }
 
-            function openModal(card) {
-                const mainImg = card.querySelector('.project-image img');
-                const title = card.querySelector('.project-header h3');
-                const description = card.querySelector('.project-content > p');
-                const gallery = card.getAttribute('data-gallery');
+        function openModal(card) {
+          const mainImg = card.querySelector(".project-image img");
+          const title = card.querySelector(".project-header h3");
+          const description = card.querySelector(".project-content > p");
+          const gallery = card.getAttribute("data-gallery");
 
-                images = gallery
-                    ? gallery.split(',').map(name => 'assets/images/' + name.trim())
-                    : [mainImg.getAttribute('src')];
+          images = gallery
+            ? gallery.split(",").map((name) => "assets/images/" + name.trim())
+            : [mainImg.getAttribute("src")];
 
-                titleEl.textContent = title ? title.textContent : '';
-                descEl.textContent = description ? description.textContent.trim() : '';
-                imgEl.alt = mainImg ? mainImg.getAttribute('alt') : '';
-                showImage(0);
+          titleEl.textContent = title ? title.textContent : "";
+          descEl.textContent = description
+            ? description.textContent.trim()
+            : "";
+          imgEl.alt = mainImg
+            ? mainImg.getAttribute("alt")
+            : title
+              ? title.textContent
+              : "";
 
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+          if (gallery) {
+            captionEl.textContent = "Voici quelques images de ce projet :";
+            captionEl.style.display = "block";
+          } else {
+            captionEl.style.display = "none";
+          }
 
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+          showImage(0);
 
-            document.querySelectorAll('.project-image').forEach(function (wrapper) {
-                wrapper.classList.add('is-clickable');
-                wrapper.addEventListener('click', function (e) {
-                    if (e.target.closest('.project-link')) return;
-                    const card = wrapper.closest('.project-card');
-                    if (card) openModal(card);
-                });
-            });
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
 
-            modal.querySelectorAll('[data-modal-close]').forEach(function (el) {
-                el.addEventListener('click', closeModal);
-            });
-            prevBtn.addEventListener('click', function () { showImage(index - 1); });
-            nextBtn.addEventListener('click', function () { showImage(index + 1); });
+        function closeModal() {
+          modal.classList.remove("active");
+          document.body.style.overflow = "";
+        }
 
-            document.addEventListener('keydown', function (e) {
-                if (!modal.classList.contains('active')) return;
-                if (e.key === 'Escape') closeModal();
-                if (e.key === 'ArrowLeft') showImage(index - 1);
-                if (e.key === 'ArrowRight') showImage(index + 1);
-            });
-        })();
+        document.querySelectorAll(".project-card").forEach(function (card) {
+          card.classList.add("is-clickable");
+          card.addEventListener("click", function (e) {
+            if (e.target.closest(".project-link")) return;
+            openModal(card);
+          });
+        });
+
+        modal.querySelectorAll("[data-modal-close]").forEach(function (el) {
+          el.addEventListener("click", closeModal);
+        });
+        prevBtn.addEventListener("click", function () {
+          showImage(index - 1);
+        });
+        nextBtn.addEventListener("click", function () {
+          showImage(index + 1);
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (!modal.classList.contains("active")) return;
+          if (e.key === "Escape") closeModal();
+          if (e.key === "ArrowLeft") showImage(index - 1);
+          if (e.key === "ArrowRight") showImage(index + 1);
+        });
+      })();
     </script>
-</body>
+  </body>
 </html>
